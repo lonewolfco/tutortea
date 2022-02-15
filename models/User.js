@@ -14,13 +14,26 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        isAlphanumeric: {
+          args: [true],
+          msg: "Must only contain alphanumeric characters.",
+        },
+        len: {
+          args: [8, 15],
+          msg: "Must only contain alphanumeric characters.",
+        },
+      },
     },
 
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: {
+          args: [8],
+          msg: "Must be at least 8 characters",
+        },
       },
     },
   },
