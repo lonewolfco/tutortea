@@ -2,7 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 class Review extends Model {}
-//need to review this, copied from student activity 16.
+
 Review.init(
   {
     id: {
@@ -14,10 +14,26 @@ Review.init(
     rating: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      validate: {
+        min: {
+          args: [1],
+          msg: "Must assign at least one cup.",
+        },
+        max: {
+          args: [5],
+          msg: "Must assign no more than 5 cups.",
+        },
+      },
     },
     review: {
       type: DataTypes.TEXT,
       allowNull: false,
+      validate: {
+        len: {
+          args: [1, 100],
+          msg: "Must be between 1 and 100 characters.",
+        },
+      },
     },
     daytime: {
       type: DataTypes.BOOLEAN,

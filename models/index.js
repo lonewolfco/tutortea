@@ -10,15 +10,15 @@ User.hasMany(Review, {
   onDelete: "CASCADE",
 });
 
+// Reviews belong to a user
+Review.belongsTo(User, {
+    foreignKey: "user_id",
+  });
+
 // A tutor can have many reviews
 Tutor.hasMany(Review, {
   foreignKey: "tutor_id",
   onDelete: "CASCADE",
-});
-
-// Reviews belong to a user
-Review.belongsTo(User, {
-  foreignKey: "user_id",
 });
 
 // Reviews belong to a tutor
