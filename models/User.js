@@ -1,7 +1,13 @@
 const { Model, DataTypes } = require("sequelize");
+const bcrypt = require("bcrypt");
+const validator = require("validator");
 const sequelize = require("../config/connection");
 
-class User extends Model {}
+class User extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+  }
+}
 //need to review this, copied from student activity 16.
 User.init(
   {
@@ -14,14 +20,15 @@ User.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: {
+        msg: "This username is already taken. Please try a different username.",
+      },
       validate: {
-        isAlphanumeric: {
-          args: [true],
-          msg: "Must only contain alphanumeric characters.",
-        },
+        isAlphanumeric: { msg: "Must only contain alphanumeric characters." },
+
         len: {
           args: [8, 15],
-          msg: "Must only contain alphanumeric characters.",
+          msg: "Must only contain 8-15 alphanumeric characters.",
         },
       },
     },
@@ -44,19 +51,15 @@ User.init(
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        if (updatedUserData.password) {
-          updatedUserData.password = await bcrypt.hash(
-            updatedUserData.password,
-            10
-          );
-        }
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10
+        );
         return updatedUserData;
       },
     },
-  },
-  {
     sequelize,
-    timestamps: false,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "user",

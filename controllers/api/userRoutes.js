@@ -4,6 +4,7 @@ const { User } = require("../../models");
 //see the withAuth helper function and use it in the other routes pages.
 
 // CREATE new user
+//route at api/user
 router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -12,6 +13,7 @@ router.post("/", async (req, res) => {
     });
 
     req.session.save(() => {
+      req.session.user_id = dbUserData.id;
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
@@ -22,6 +24,7 @@ router.post("/", async (req, res) => {
 });
 
 // Login
+//route at api/user/login
 router.post("/login", async (req, res) => {
   try {
     const dbUserData = await User.findOne({
@@ -47,7 +50,12 @@ router.post("/login", async (req, res) => {
     }
 
     req.session.save(() => {
+      req.session.user_id = dbUserData.id;
       req.session.loggedIn = true;
+      console.log(
+        "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
+        req.session.cookie
+      );
 
       res
         .status(200)
@@ -60,13 +68,16 @@ router.post("/login", async (req, res) => {
 });
 
 // Logout
+//at api/user/logout
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
+      console.log("You've been logged out");
       res.status(204).end();
     });
   } else {
     res.status(404).end();
+    console.log("You failed to log out");
   }
 });
 
