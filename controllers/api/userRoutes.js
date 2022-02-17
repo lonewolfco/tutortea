@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { UniqueConstraintError } = require("sequelize/types");
+const { sequelize } = require("sequelize");
 const { User } = require("../../models");
 //boilerplate code from class activity. Not tested for this project
 //see the withAuth helper function and use it in the other routes pages.
@@ -8,22 +8,23 @@ const { User } = require("../../models");
 //route at api/user
 router.post("/", async (req, res) => {
   try {
+    const checkUsername = await User.findOne({
+      where: {
+        username: req.body.username,
+      },
+    });
+
+    if (checkUsername) {
+      res
+        .status(400)
+        .json({ message: "This username is already taken. Please try again." });
+      return;
+    }
+
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
     });
-
-    const checkUsername = await User.findAll({
-      where: {
-        username: unique,
-      },
-    });
-
-    if (!checkUsername) {
-      res.status(500).json({
-        message: "This username is already taken. Please try a different one",
-      });
-    }
 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
@@ -90,12 +91,11 @@ router.post("/login", async (req, res) => {
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      console.log("You've been logged out");
       res.status(204).end();
     });
   } else {
     res.status(404).end();
-    console.log("You failed to log out");
+   
   }
 });
 

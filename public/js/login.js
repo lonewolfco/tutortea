@@ -30,13 +30,6 @@ const signupFormHandler = async (event) => {
   const password = document.querySelector("#password-signup").value.trim();
 
   const userCreateValidation = document.querySelector(".userCreateValidation");
-  const pwCreateValidation = document.querySelector(".pwCreateValidation");
-
-  // if (username.length <= 8) {
-  //   userCreateValidation.classList.remove("d-none");
-  // } else if (password <= 8) {
-  //   pwCreateValidation.classList.remove("d-none");
-  // }
 
   if (username && password) {
     const response = await fetch("/api/user", {

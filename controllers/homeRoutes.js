@@ -23,4 +23,13 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+// Logout route
+router.get("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("logout");
+});
+
 module.exports = router;
