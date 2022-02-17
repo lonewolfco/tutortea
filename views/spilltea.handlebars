@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="/css/starrating.css" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+/>
+<div>
+  <form class="submit-review rounded-3 row g-2 m-2 p-2">
+    <h2
+      class="text-start pt-2 pb-4 border-bottom border-3"
+      style="border-color: #283130"
+    >Spill The Tea</h2>
+    <div class="col-md-12">
+      <label for="username" class="form-label">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        disabled="true"
+        value="{{username}}"
+      />
+    </div>
+    <div class="col-md-12">
+      <label for="tutorname" class="form-label">Select a Tutor</label>
+      <select
+        name="tutor-select"
+        type="select"
+        class="form-control"
+        id="tutor-select"
+      >
+        {{#each tutors as |tutor|}}
+          <option value="{{tutor.id}}">{{tutor.name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class="col-md-12">
+      <label for="availability" class="form-label">Availability</label>
+      <div class="display-flex justify-space-around align-center p-2">
+        <div class="flex-column align-center">
+          <label for="daytime">daytime</label>
+          <input type="checkbox" id="daytime" name="daytime" />
+        </div>
+        <div class="flex-column align-center">
+          <label for="nights">nights</label>
+          <input type="checkbox" id="nights" name="nights" />
+        </div>
+        <div class="flex-column align-center">
+          <label for="weekends">weekends</label>
+          <input type="checkbox" id="weekends" name="weekends" />
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-12">
+      <label for="rating" class="form-label">Rating</label>
+      <div class="rating-css">
+        <div class="star-icon">
+          <input type="radio" name="rating1" id="rating1" checked="true" />
+          <label for="rating1" class="fa fa-mug-hot"></label>
+          <input type="radio" name="rating1" id="rating2" />
+          <label for="rating2" class="fa fa-mug-hot"></label>
+          <input type="radio" name="rating1" id="rating3" />
+          <label for="rating3" class="fa fa-mug-hot"></label>
+          <input type="radio" name="rating1" id="rating4" />
+          <label for="rating4" class="fa fa-mug-hot"></label>
+          <input type="radio" name="rating1" id="rating5" />
+          <label for="rating5" class="fa fa-mug-hot"></label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12">
+      <label for="review" class="form-label">Review</label>
+      <textarea
+        maxlength="100"
+        class="form-control"
+        id="review"
+        name="review"
+      ></textarea>
+    </div>
+    <div class="gy-3 py-3 my-3 text-center col-12">
+      <button type="submit" class="btn btn-lg btn-dark">Spill It</button>
+    </div>
+  </form>
+</div>
