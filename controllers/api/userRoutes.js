@@ -1,4 +1,5 @@
 const router = require("express").Router();
+const { UniqueConstraintError } = require("sequelize/types");
 const { User } = require("../../models");
 //boilerplate code from class activity. Not tested for this project
 //see the withAuth helper function and use it in the other routes pages.
@@ -12,6 +13,18 @@ router.post("/", async (req, res) => {
       password: req.body.password,
     });
 
+    const checkUsername = await User.findAll({
+      where: {
+        username: unique,
+      },
+    });
+
+    if (!checkUsername) {
+      res.status(500).json({
+        message: "This username is already taken. Please try a different one",
+      });
+    }
+
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
       req.session.loggedIn = true;
@@ -19,7 +32,10 @@ router.post("/", async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({
+      message:
+        "Please enter a valid username and password (at least 8 alphanumeric characters})",
+    });
   }
 });
 
@@ -34,23 +50,25 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
-      res
-        .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+      res.status(400).json({
+        message:
+          "Invalid username or password. Username must be 8-15 characters, password must be at least 8 alphanumeric characters.",
+      });
       return;
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res
-        .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+      res.status(400).json({
+        message:
+          "Invalid username or password. Username must be 8-15 characters, password must be at least 8 alphanumeric characters.",
+      });
       return;
     }
 
     req.session.save(() => {
-      req.session.user_id = dbUserData.id;
+      req.session.id = dbUserData.id;
       req.session.loggedIn = true;
       console.log(
         "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
