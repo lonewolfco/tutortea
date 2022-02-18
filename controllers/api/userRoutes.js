@@ -1,7 +1,13 @@
 const router = require("express").Router();
+
+const {
+  User
+} = require("../../models");
+
 const { sequelize } = require("sequelize");
-const { User } = require("../../models");
-//boilerplate code from class activity. Not tested for this project
+
+
+
 //see the withAuth helper function and use it in the other routes pages.
 
 // CREATE new user
@@ -28,6 +34,7 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
@@ -51,25 +58,33 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
-      res.status(400).json({
-        message:
-          "Invalid username or password. Username must be 8-15 characters, password must be at least 8 alphanumeric characters.",
-      });
+
+      res
+        .status(400)
+        .json({
+          message: "Incorrect username or password. Please try again!"
+        });
+
       return;
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({
-        message:
-          "Invalid username or password. Username must be 8-15 characters, password must be at least 8 alphanumeric characters.",
-      });
+
+      res
+        .status(400)
+        .json({
+          message: "Incorrect username or password. Please try again!"
+        });
+
       return;
     }
 
     req.session.save(() => {
-      req.session.id = dbUserData.id;
+
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       console.log(
         "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
@@ -78,7 +93,10 @@ router.post("/login", async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbUserData, message: "You are now logged in!" });
+        .json({
+          user: dbUserData,
+          message: "You are now logged in!"
+        });
     });
   } catch (err) {
     console.log(err);

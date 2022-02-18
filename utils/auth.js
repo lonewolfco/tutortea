@@ -8,4 +8,20 @@ const withAuth = (req, res, next) => {
   }
 };
 
-module.exports = withAuth;
+// this one is for when checking auth from an api endpoint
+const withAuthJson = (req, res, next) => {
+  // If the user is not logged in, respond with a 403 and a helpful message
+  if (!req.session.loggedIn) {
+    res.status(403).json({
+      message: "You're not logged in"
+    })
+  } else {
+    // We call next() if the user is authenticated
+    next();
+  }
+};
+
+module.exports = {
+  withAuth,
+  withAuthJson
+};
