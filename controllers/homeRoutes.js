@@ -28,6 +28,7 @@ router.get("/login", (req, res) => {
   res.render("login");
 });
 
+
 // create review
 router.get("/spilltea", withAuth, async (req, res) => {
   const tutorsData = await Tutor.findAll(); // Server-side render
@@ -43,4 +44,14 @@ router.get("/spilltea", withAuth, async (req, res) => {
   });
 })
 
+// Logout route
+router.get("/logout", (req, res) => {
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("logout");
+});
+
 module.exports = router;
+

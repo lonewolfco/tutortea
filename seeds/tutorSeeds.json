@@ -2,5 +2,9 @@
     {
         "name": "Anthony Brown",
         "email": "password12345@gmail.com"
+      },
+      {
+        "name": "ABrown",
+        "email": "password12@gmail.com"
       }
 ]
