@@ -1,6 +1,38 @@
 [
     {
-        "name": "Anthony Brown",
-        "email": "password12345@gmail.com"
+        "name": "Dwight Schrute", 1
+        "email": "DevSchrute@Shrutefarms.com"
+      },
+    {
+        "name": "Micheal Scott", 2
+        "email": "YodaMicheal@dateMikeEnterprises.com"
+      },
+    {
+        "name": "Stanley Hudson", 3
+        "email": "StanleyHudson@2ututors.com"
+      },{
+        "name": "Darrel Philbin", 4
+        "email": "DevDarrel@2ututors.com"
+      },{
+        "name": "Pam Beesly", 5
+        "email": "PamBeesley@2ututors.com"
+      },{
+        "name": "Jim Halpert", 6
+        "email": "HalpertHelps@2tutors.com"
+      },{
+        "name": "Toby Flederson", 7
+        "email": "Tutortobias@2ututors.com"
+      },
+      {
+        "name": "Kelly Kapoor", 8
+        "email": "KKapoor@2ututors.com"
+      },
+      {
+        "name": "Ryan Howard", 9
+        "email": "Rhowie@2ututors.com"
+      },
+      {
+        "name": "Kevin Malone", 10
+        "email": "KingKevin@2ututors.com"
       }
 ]

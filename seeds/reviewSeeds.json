@@ -1,218 +1,92 @@
 [
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": Dwight
+ {
+          "rating": 2,
+          "review":"Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, Dwight could tell that I had not studied the night prior. He told me if I did not have time to study then he did not have time to waste on me that could be better spent with M on this years beet harvest.",
+          "daytime": false,
+          "nights": true,
+          "weekends": false,
+          "user_id": 1,
+          "tutor_id": 1
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": Micheal
+    "user_id": ,
+    "tutor_id": 2
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": Stanley
+    "user_id": ,
+    "tutor_id": 3
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": Merideth
+    "user_id": ,
+    "tutor_id": 4
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": Pam
+    "user_id": ,
+    "tutor_id": 5
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review":"Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, Dwight could tell that I had not studied the night prior. He told me if I did not have time to study then he did not have time to waste on me that could be better spent with M on this years beet harvest."
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": Jim
+    "user_id": ,
+    "tutor_id": 6
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
     "user_id": 1,
-    "tutor_id": Toby
+    "tutor_id": 7
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": 
+    "user_id": ,
+    "tutor_id": 8
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
+    "user_id": ,
+    "tutor_id": 9
   },
   {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
+    "rating": ,
+    "review": "",
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
-  },
-  {
-    "rating": 2,
-    "review": "TODO:ALFJKASDASDFJKLFDLJKFKLASDJKLA",
-    "daytime": false,
-    "nights": true,
-    "weekends": false,
-    "user_id": 1,
-    "tutor_id": 1
+    "user_id": ,
+    "tutor_id": 10
   }
 ]
