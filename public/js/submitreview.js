@@ -9,8 +9,6 @@ const submitReview = async (event) => {
     "review": document.querySelector('#review').value
   };
 
-  console.log(body);
-
   const response = await fetch("/api/review", {
     method: "POST",
     headers: {
@@ -20,7 +18,7 @@ const submitReview = async (event) => {
   });
 
   if (response.ok) {
-    document.location.replace("/drink");
+    document.location.replace("/");
     alert("You have submitted a review");
   } else {
     alert("Failed to submit review.");
