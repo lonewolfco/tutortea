@@ -1,0 +1,92 @@
+[
+  {
+    "rating": 2,
+    "review": "Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, I started typing a string as a boolean and Dwight said, Whenever I'm about to do something, I think, Would an idiot do that? And if they would, I do not do that thing.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 10,
+    "tutor_id": 1
+  },
+  {
+    "rating": 3,
+    "review": "I said Micheal here should I use a boolean? Micheal replied, thats what she said. That pretty much sums its up.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 9,
+    "tutor_id": 2
+  },
+  {
+    "rating": 4,
+    "review": "Stanley was very helpful, I just gave him a 4 due his lack of enthursiasm, daily.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 8,
+    "tutor_id": 3
+  },
+  {
+    "rating": 5,
+    "review": "Darrell was a great tutor, always to the point and friendly.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 7,
+    "tutor_id": 4
+  },
+  {
+    "rating": 5,
+    "review": "I can't recommend Pam enough, she was so nice and knew anything I had to throw at her.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 6,
+    "tutor_id": 5
+  },
+  {
+    "rating": 5,
+    "review": "Jim was awesome. Very helpful and put things in a simple manner I could understand.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 5,
+    "tutor_id": 6
+  },
+  {
+    "rating": 1,
+    "review": "Toby",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 4,
+    "tutor_id": 7
+  },
+  {
+    "rating": 4,
+    "review": "Kelly",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 3,
+    "tutor_id": 8
+  },
+  {
+    "rating": 3,
+    "review": "Ryan",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 2,
+    "tutor_id": 9
+  },
+  {
+    "rating": 2,
+    "review": "Kevin",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 1,
+    "tutor_id": 10
+  }
+]
