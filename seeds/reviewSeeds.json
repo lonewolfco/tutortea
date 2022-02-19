@@ -5,7 +5,7 @@
           "daytime": false,
           "nights": true,
           "weekends": false,
-          "user_id": 1,
+          "user_id": 10,
           "tutor_id": 1
   },
   {
@@ -14,7 +14,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 9,
     "tutor_id": 2
   },
   {
@@ -23,7 +23,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 8,
     "tutor_id": 3
   },
   {
@@ -32,7 +32,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 7,
     "tutor_id": 4
   },
   {
@@ -41,7 +41,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 6,
     "tutor_id": 5
   },
   {
@@ -50,7 +50,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 5,
     "tutor_id": 6
   },
   {
@@ -59,7 +59,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": 1,
+    "user_id": 4,
     "tutor_id": 7
   },
   {
@@ -68,7 +68,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 3,
     "tutor_id": 8
   },
   {
@@ -77,7 +77,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 2,
     "tutor_id": 9
   },
   {
@@ -86,7 +86,7 @@
     "daytime": false,
     "nights": true,
     "weekends": false,
-    "user_id": ,
+    "user_id": 1,
     "tutor_id": 10
   }
 ]
