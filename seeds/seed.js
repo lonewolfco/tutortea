@@ -4,6 +4,7 @@ const { User, Tutor, Review } = require("../models");
 const userData = require("./userSeeds.json");
 const reviewData = require("./reviewSeeds.json");
 const tutorData = require("./tutorSeeds.json");
+//add review seeds
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });

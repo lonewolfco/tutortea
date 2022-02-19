@@ -1,5 +1,5 @@
 
-.btn {
+.submitBtn {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -13,7 +13,7 @@
   border: 2px solid white;
   transition: 0.02s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
 }
-.btn::before {
+.submitBtn::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -27,7 +27,7 @@
   transition: 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1), left 0.1s cubic-bezier(0.1, 0, 0.1, 1);
   z-index: -1;
 }
-.btn::after {
+.submitBtn::after {
   content: "";
   display: inline-block;
   background-image: url("https://image.flaticon.com/icons/png/128/109/109617.png");
@@ -43,15 +43,15 @@
   background-position: center;
   transition: right 0.1s cubic-bezier(0.1, 0, 0.1, 1);
 }
-.btn:hover {
+.submitBtn:hover {
   padding: 0.5em 3.5em 0.5em 0.5em;
 }
-.btn:hover::before {
+.submitBtn:hover::before {
   left: calc(100% - 3em);
   right: 0;
   transition: 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
 }
-.btn:hover::after {
+.submitBtn:hover::after {
   right: 0;
   transition: right 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
 }
