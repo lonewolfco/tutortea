@@ -4,6 +4,8 @@ const loginFormHandler = async (event) => {
   const username = document.querySelector("#username-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
+  const userValidation = document.querySelector(".userValidation");
+
   if (username && password) {
     const response = await fetch("/api/user/login", {
       method: "POST",
@@ -14,7 +16,9 @@ const loginFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to log in.");
+      const invalidResponse = await response.json();
+      userValidation.classList.remove("d-none");
+      userValidation.innerHTML = invalidResponse.message;
     }
   }
 };
@@ -24,6 +28,8 @@ const signupFormHandler = async (event) => {
 
   const username = document.querySelector("#username-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
+
+  const userCreateValidation = document.querySelector(".userCreateValidation");
 
   if (username && password) {
     const response = await fetch("/api/user", {
@@ -35,7 +41,9 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
-      alert("Failed to sign up.");
+      const duplicateUser = await response.json();
+      userCreateValidation.classList.remove("d-none");
+      userCreateValidation.innerHTML = duplicateUser.message;
     }
   }
 };

@@ -3,6 +3,7 @@ const { User, Tutor } = require("../models");
 //needs additional code, await the tutor, review, users seeds files under line 4.
 const userData = require("./userSeeds.json");
 const tutorData = require("./tutorSeeds.json");
+//add review seeds
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
@@ -13,6 +14,7 @@ const seedAll = async () => {
   });
 
   await Tutor.bulkCreate(tutorData);
+  //add review seeds
 
   process.exit(0);
 };

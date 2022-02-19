@@ -1,12 +1,32 @@
 const router = require("express").Router();
-const { User } = require("../../models");
-//boilerplate code from class activity. Not tested for this project
+
+const {
+  User
+} = require("../../models");
+
+const { sequelize } = require("sequelize");
+
+
+
 //see the withAuth helper function and use it in the other routes pages.
 
 // CREATE new user
 //route at api/user
 router.post("/", async (req, res) => {
   try {
+    const checkUsername = await User.findOne({
+      where: {
+        username: req.body.username,
+      },
+    });
+
+    if (checkUsername) {
+      res
+        .status(400)
+        .json({ message: "This username is already taken. Please try again." });
+      return;
+    }
+
     const dbUserData = await User.create({
       username: req.body.username,
       password: req.body.password,
@@ -14,12 +34,16 @@ router.post("/", async (req, res) => {
 
     req.session.save(() => {
       req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       res.status(200).json(dbUserData);
     });
   } catch (err) {
     console.log(err);
-    res.status(500).json(err);
+    res.status(500).json({
+      message:
+        "Please enter a valid username and password (at least 8 alphanumeric characters})",
+    });
   }
 });
 
@@ -34,23 +58,33 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
+
       res
         .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+        .json({
+          message: "Incorrect username or password. Please try again!"
+        });
+
       return;
     }
 
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
+
       res
         .status(400)
-        .json({ message: "Incorrect username or password. Please try again!" });
+        .json({
+          message: "Incorrect username or password. Please try again!"
+        });
+
       return;
     }
 
     req.session.save(() => {
+
       req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
       req.session.loggedIn = true;
       console.log(
         "🚀 ~ file: user-routes.js ~ line 57 ~ req.session.save ~ req.session.cookie",
@@ -59,7 +93,10 @@ router.post("/login", async (req, res) => {
 
       res
         .status(200)
-        .json({ user: dbUserData, message: "You are now logged in!" });
+        .json({
+          user: dbUserData,
+          message: "You are now logged in!"
+        });
     });
   } catch (err) {
     console.log(err);
@@ -72,12 +109,11 @@ router.post("/login", async (req, res) => {
 router.post("/logout", (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
-      console.log("You've been logged out");
       res.status(204).end();
     });
   } else {
     res.status(404).end();
-    console.log("You failed to log out");
+   
   }
 });
 
