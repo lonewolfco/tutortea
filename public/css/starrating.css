@@ -1,5 +1,5 @@
 .rating-css div {
-  color: var(--primary);
+  color: var(--dark);
   font-size: 30px;
   font-family: sans-serif;
   font-weight: 800;
@@ -22,3 +22,5 @@
   transform: scale(0.8);
   transition: 0.3s ease;
 }
+
+/* come back and try different colors. Start with white, add a cup it turns black */

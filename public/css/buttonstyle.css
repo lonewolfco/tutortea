@@ -1,4 +1,4 @@
-
+/* 
 .submitBtn {
   position: absolute;
   left: 50%;
@@ -11,7 +11,7 @@
   text-transform: uppercase;
   padding: 0.5em 2em;
   border: 2px solid white;
-  transition: 0.02s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
+  transition: 0.3s 0.3s cubic-bezier(0.1, 0, 0.1, 1);
 }
 .submitBtn::before {
   content: "";
@@ -24,7 +24,7 @@
   background:white;
   color:#283130;
 
-  transition: 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1), left 0.1s cubic-bezier(0.1, 0, 0.1, 1);
+  transition: 0.3s 0.31s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s cubic-bezier(0.1, 0, 0.1, 1);
   z-index: -1;
 }
 .submitBtn::after {
@@ -37,11 +37,10 @@
   top: 0;
   left: calc(100% - 3em);
   right: 3em;
-  bottom: 0;
   background-size: 1.5em;
   background-repeat: no-repeat;
   background-position: center;
-  transition: right 0.1s cubic-bezier(0.1, 0, 0.1, 1);
+  transition: right 0.3s cubic-bezier(0.1, 0, 0.1, 1);
 }
 .submitBtn:hover {
   padding: 0.5em 3.5em 0.5em 0.5em;
@@ -49,9 +48,9 @@
 .submitBtn:hover::before {
   left: calc(100% - 3em);
   right: 0;
-  transition: 0.2s cubic-bezier(0.1, 0, 0.1, 1), left 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
+  transition: 0.3s cubic-bezier(0.1, 0, 0.1, 1), left 0.3s 0.3s cubic-bezier(0.1, 0, 0.1, 1);
 }
 .submitBtn:hover::after {
   right: 0;
   transition: right 0.1s 0.1s cubic-bezier(0.1, 0, 0.1, 1);
-}
+} */

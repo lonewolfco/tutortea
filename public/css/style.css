@@ -71,106 +71,6 @@ a {
   text-shadow: var(--text-shadow);
 }
 
-/* body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color: var(--quatrinary);
-  }
-  
-  a {
-    color: var(--dark);
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: inherit;
-  }
-  
-  header {
-    padding: 40px;
-    text-align: center;
-    background: var(--primary);
-    color: var(--light);
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-  }
-  
-  aside {
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
-    text-align: left;
-    color: var(--light);
-  }
-  
-
-  
-  nav {
-    display: flex;
-    background-color: var(--secondary);
-  }
-  
-  nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
-  }
-  
-  .gallery {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    transition: color 0.1s;
-    margin-left: 16px;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .painting {
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-  
-  .painting-details {
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
-
-*/
-
 /* CARDS */
 .card {
   margin: 20px;
@@ -222,16 +122,29 @@ a {
 }
 
 .dashCards {
-  background-color: rgb(96, 108, 56, 0.5) !important;
+  background-color: var(--secondary) !important;
+  opacity: 0.8;
 }
 
-.signup-form {
-  background: rgb(96, 108, 56, 0.5);
+.signup-form,
+.submit-review {
+  background-color: var(--secondary) !important;
+  opacity: 0.8;
+  color: var(--textPrimary);
 }
 
 #newHere {
   display: flex;
   justify-content: center !important;
+}
+
+.submitBtn {
+  text-decoration: none;
+}
+.submitBtn:hover {
+  background-color: #cecece;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 /* LAYOUT */
