@@ -1,53 +1,43 @@
 :root {
-    --primary: #28302F;
-    --secondary: #747867;
-    --background: #D1D1D1;
-    --textPrimary: #FFFFFF;
-  }
+  --primary: #28302f;
+  --secondary: #747867;
+  --background: #d1d1d1;
+  --textPrimary: #ffffff;
+}
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--background);
-  }
+body {
+  margin: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+  background-color: var(--background);
+  background-image: url("/assets/TeaCupsOpacity28.png");
+  background-size: 6rem;
+  background-repeat: repeat;
+  background-position: center;
+}
 
-  a {
-    text-decoration: none;
-  }
+a {
+  text-decoration: none;
+}
 
-  #nav {
-    background-color: var(--primary);
-  }
-  
-  .navBtn {
-    background-color: var(--secondary);
-    color: var(--textPrimary);
-  }
+#nav {
+  background-color: var(--primary);
+}
 
-  .dropdown-menu-dark {
-    background: #28302fdc;
-    color: var(--textPrimary);
-  }
+.navBtn {
+  background-color: var(--secondary);
+  color: var(--textPrimary);
+}
 
+.dropdown-menu-dark {
+  background: #28302fdc;
+  color: var(--textPrimary);
+}
 
- 
-
-  #footer {
-    background-color: var(--primary);
-    color: var(--textPrimary);
-  }
-
-  .background {
-    height: 450px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("/assets/TutorTea.png");
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+#footer {
+  background-color: var(--primary);
+  color: var(--textPrimary);
+  z-index: 50;
 }
 
 #test {
@@ -70,10 +60,10 @@
   border: solid 1px #343a40;
   text-align: center;
   background: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
   z-index: 999;
   cursor: pointer;
-  transition: border-color, color, background-color, bottom .5s ease-out;
+  transition: border-color, color, background-color, bottom 0.5s ease-out;
 }
 
 #scrollTop:hover {
@@ -81,8 +71,7 @@
   text-shadow: var(--text-shadow);
 }
 
-
-  /* body {
+/* body {
     font-family: Arial;
     margin: 0;
     display: flex;
@@ -181,61 +170,74 @@
   }
 
 */
-  
-  /* CARDS */
-  .card {
-    margin: 20px;
-    flex: 0 1 300px;
-    border: 7px double var(--dark);
-    border-radius: 10px;
-    background-color: var(--light);
-    color: var(--dark);
-  }
-  
-  .login-card {
-    margin: 0 0 20px 0;
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 5px;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: double;
-    border-width: thick;
-    background-color: #577a7c;
-    color: var(--light);
-  }
-  
-  .card header {
-    color: var(--light);
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    background-color: var(--tertiary);
-    padding: 0.625rem;
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-  }
-  
-  .card-body {
-    font-size: 1.4rem;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .gallery-name {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 5px var(--secondary);
-    border: 10px groove var(--light);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-  
-  /* LAYOUT */
-  .container {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    align-items: center;
-  }
+
+/* CARDS */
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
+
+.card header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.gallery-name {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 5px var(--secondary);
+  border: 10px groove var(--light);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.dashCards {
+  background-color: rgb(96, 108, 56, 0.5) !important;
+}
+
+.signup-form {
+  background: rgb(96, 108, 56, 0.5);
+}
+
+#newHere {
+  display: flex;
+  justify-content: center !important;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  align-items: center;
+}
