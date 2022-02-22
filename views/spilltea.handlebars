@@ -3,8 +3,8 @@
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
 />
-<div>
-  <form class="submit-review rounded-3 row g-2 m-2 p-2">
+<div class="d-flex justify-content-center">
+  <form class="submit-review rounded-3 row col-md-8 g-2 m-2 p-2">
     <h2
       class="text-start pt-2 pb-4 border-bottom border-3"
       style="border-color: #283130"
@@ -31,9 +31,11 @@
         {{/each}}
       </select>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12" style="font-size:1rem">
       <label for="availability" class="form-label">Availability</label>
-      <div class="display-flex justify-space-around align-center p-2">
+      <div
+        class="d-flex row row-cols-4 justify-space-around align-center justify-content-center p-2"
+      >
         <div class="flex-column align-center">
           <label for="daytime">daytime</label>
           <input type="checkbox" id="daytime" name="daytime" />
