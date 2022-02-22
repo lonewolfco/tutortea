@@ -30,7 +30,11 @@ Goal/Motivation:
 
 Problems Solved:
 
-          TBD
+          Over the course of this bootcamp, our Team here at TutorTea and many others, have experienced the challenge of finding the right tutor to mesh with our busy lives. Finding the tutor to mesh with our specific area of coding that no matter where we look, what we watch or listen to, cannot be learned or retained. We need a new form of explanation but are looking into a bucket of hundreds to choose from. 
+          
+          When looking for this ideal perfect tutor, we found our best resource was our fellow classmates recommendations. We then thought, why doesnt a database exist for students to research who the tutor was  and when they might find a middle ground to meet. 
+          
+          The TutorTea gives students the ability to spill the Tea on their tutor good or bad. Future students will be able to come to our site and find the unicorn tutor like they would a movie on rotten tomatoes or google stars for that killer happy hour. For most today, live in a world of reviews and stars to guide our decisions. So at TutorTea we bring that to the realm of finding a tutor.
 
 
 

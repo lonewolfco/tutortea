@@ -1,7 +1,7 @@
 [
   {
     "rating": 2,
-    "review": "Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, I started typing a string as a boolean and Dwight said, Whenever I'm about to do something, I think, Would an idiot do that? And if they would, I do not do that thing.",
+    "review": "Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, I started typing the wrong function and Dwight said, Whenever I'm about to do something, I think, Would an idiot do that? And if they would, I do not do that thing.",
     "daytime": false,
     "nights": true,
     "weekends": false,
@@ -19,7 +19,7 @@
   },
   {
     "rating": 4,
-    "review": "Stanley was very helpful, I just gave him a 4 due his lack of enthursiasm, daily.",
+    "review": "Stanley was very helpful, I just gave him a 4 due his lack of enthusiasm, daily.",
     "daytime": false,
     "nights": true,
     "weekends": false,
@@ -55,7 +55,7 @@
   },
   {
     "rating": 1,
-    "review": "Toby",
+    "review": "Toby was very informative on the subject matter, but never seemed interested in being in the session.",
     "daytime": false,
     "nights": true,
     "weekends": false,
@@ -64,7 +64,7 @@
   },
   {
     "rating": 4,
-    "review": "Kelly",
+    "review": "Kelly was very nice and knew the matierial. I just can't give her a 5 for how much she brought up this other tutor Ryan.",
     "daytime": false,
     "nights": true,
     "weekends": false,
@@ -73,7 +73,7 @@
   },
   {
     "rating": 3,
-    "review": "Ryan",
+    "review": "Ryan was helpful most of the time. It was just the arrogance. He claimed he would own 2u someday.",
     "daytime": false,
     "nights": true,
     "weekends": false,
@@ -82,7 +82,7 @@
   },
   {
     "rating": 2,
-    "review": "Kevin",
+    "review": "Kevin was a funny dude to work with. But when I asked how toast and pancakes work, he replied, whenever I make a taco I get too excited, and crush it. This was our last session.",
     "daytime": false,
     "nights": true,
     "weekends": false,
