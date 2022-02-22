@@ -20,7 +20,7 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("logout");
+  res.render("login");
 });
 
 // create review
