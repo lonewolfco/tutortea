@@ -5,6 +5,11 @@
   --textPrimary: #ffffff;
 }
 
+@font-face {
+  font-family: "BellandLamb";
+  src: url("/assets/Bell-and-lamb.otf") format("opentype");
+}
+
 body {
   margin: 0;
   max-height: 100vh;
@@ -37,7 +42,10 @@ a {
 #footer {
   background-color: var(--primary);
   color: var(--textPrimary);
-  z-index: 50;
+  z-index: 0;
+  position:bottom;
+  position:fixed;
+  width:100vw;
 }
 
 #test {
@@ -152,4 +160,10 @@ a {
 .signup-form1 {
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 760px){
+  #footer{
+    position:relative!important;
+  }
 }
