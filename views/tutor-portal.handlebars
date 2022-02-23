@@ -1,0 +1,71 @@
+
+<link rel="stylesheet" href="/css/tutorPortal.css" />
+
+
+<main class="container d-flex justify-content-center main-content">
+      <div
+        class="col teacup img-fluid mx-lg-auto xs-mx-auto"
+        style="width: 40rem"
+      >
+        <img src="./assets/tutorlist.png" class="" alt="tea cup" />
+        <div class="card-body"></div>
+      </div>
+
+      <div class="row row-cols-sm-10 tutor-form">
+        
+        <form class="col px-5 form-card">
+          <div class="mb-3">
+            <div class="card-body">
+              <p>Add a Tutor!</p>
+            </div>
+            
+            <label class="form-label">Email</label>
+            
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              aria-describedby="emailHelp"
+            />
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input
+                type="name"
+                class="form-control"
+                id="name"
+              />
+            </div>
+
+            <button id="tutor-button" type="submit" class="btn btn-primary btn-outline-dark">
+              Submit
+            </button>
+          </div>
+        </form>
+        <div class="col" style="width: 18rem">
+          <img
+            src="./assets/pourtea.jpg"
+            class="card-img-top"
+            alt="tea kettle"
+          />
+        </div>
+      </div>
+
+      <div class="container tutor-list p-5 text-center">
+        <h1>Active Tutors</h1>
+        <div class="row row-cols-sm-2 overflow-auto w-100 px-3 list-padding">
+          <div class="col-sm-6">
+            <h1 class="text-center">Name:</h1>
+            <ul class="text-center text-sm-center">
+          
+            </ul>
+          </div>
+
+          <div class="col-sm-6">
+            <h1 class="text-center">Email:</h1>
+            <ul class="text-center text-sm-center">
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>

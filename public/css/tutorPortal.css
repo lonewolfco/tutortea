@@ -1,0 +1,52 @@
+
+  
+  .teacup {
+    position: absolute;
+    z-index: -2;
+    margin-top: 40rem;
+  
+  }
+  
+  .img {
+  
+    position: relative;
+    z-index: -1;
+  
+  
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  
+  .teacup {
+    filter: blur(2px);
+  }
+  
+  
+  .tutor-list {
+    background-color: #182c23;
+    opacity: 0.4;
+    color: white;
+    border-radius: 10px;
+  
+  }
+  
+  .list-padding{
+    padding-bottom: 30rem;
+  }
+  
+  
+  #tutor-button {
+    margin-bottom: 50px;
+    background-color: #5e877f !important;
+  }
+  
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  

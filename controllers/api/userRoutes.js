@@ -1,12 +1,8 @@
 const router = require("express").Router();
 
-const {
-  User
-} = require("../../models");
+const { User } = require("../../models");
 
 const { sequelize } = require("sequelize");
-
-
 
 //see the withAuth helper function and use it in the other routes pages.
 
@@ -58,12 +54,9 @@ router.post("/login", async (req, res) => {
     });
 
     if (!dbUserData) {
-
-      res
-        .status(400)
-        .json({
-          message: "Incorrect username or password. Please try again!"
-        });
+      res.status(400).json({
+        message: "Incorrect username or password. Please try again!",
+      });
 
       return;
     }
@@ -71,18 +64,14 @@ router.post("/login", async (req, res) => {
     const validPassword = await dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-
-      res
-        .status(400)
-        .json({
-          message: "Incorrect username or password. Please try again!"
-        });
+      res.status(400).json({
+        message: "Incorrect username or password. Please try again!",
+      });
 
       return;
     }
 
     req.session.save(() => {
-
       req.session.user_id = dbUserData.id;
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
@@ -91,12 +80,10 @@ router.post("/login", async (req, res) => {
         req.session.cookie
       );
 
-      res
-        .status(200)
-        .json({
-          user: dbUserData,
-          message: "You are now logged in!"
-        });
+      res.status(200).json({
+        user: dbUserData,
+        message: "You are now logged in!",
+      });
     });
   } catch (err) {
     console.log(err);
@@ -113,7 +100,6 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
-   
   }
 });
 
