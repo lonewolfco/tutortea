@@ -22,7 +22,6 @@
     "handlebars": "^4.7.3",
     "mysql2": "^2.2.5",
     "sequelize": "^6.3.5",
-    "toastify": "^2.0.1",
     "validator": "^13.7.0"
   },
   "devDependencies": {
