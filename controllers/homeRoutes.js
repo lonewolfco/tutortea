@@ -7,7 +7,9 @@ router.get("/", async (req, res) => {
   try {
     res.render("homepage", {
       loggedIn: req.session.loggedIn,
+      toast: req.query.toast,
     });
+
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -20,7 +22,9 @@ router.get("/login", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("login");
+  res.render("login", {
+    toast:req.query.toast,
+  });
 });
 
 // create review
@@ -43,7 +47,9 @@ router.get("/logout", (req, res) => {
     res.redirect("/");
     return;
   }
-  res.render("logout");
+  res.render("logout", {
+    toast:req.query.toast,
+  });
 });
 
 module.exports = router;

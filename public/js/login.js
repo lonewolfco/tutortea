@@ -41,11 +41,16 @@ const loginFormHandler1 = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace(
+        "/?toast=" + encodeURI("You're logged in! Bottoms up!")
+      );
     } else {
-      const invalidResponse = await response.json();
-      userValidation.classList.remove("d-none");
-      userValidation.innerHTML = invalidResponse.message;
+      document.location.replace(
+        "/login/?toast=" +
+          encodeURI(
+            "Invalid user name or password. (Min 8 alphanumeric characters)"
+          )
+      );
     }
   }
 };
@@ -66,7 +71,9 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace(
+        "/?toast=" + encodeURI(`Welcome ${username}! Bottoms up!`)
+      );
     } else {
       const duplicateUser = await response.json();
       userCreateValidation.classList.remove("d-none");
