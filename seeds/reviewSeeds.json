@@ -1,0 +1,92 @@
+[
+  {
+    "rating": 2,
+    "review": "Dwight was on awesome until I felt he got comfortable in our sessions. In one session we had, I started typing the wrong function and Dwight said, Whenever I'm about to do something, I think, Would an idiot do that? And if they would, I do not do that thing.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 10,
+    "tutor_id": 1
+  },
+  {
+    "rating": 3,
+    "review": "I said Micheal here should I use a boolean? Micheal replied, thats what she said. That pretty much sums its up our sessions day to day.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 9,
+    "tutor_id": 2
+  },
+  {
+    "rating": 4,
+    "review": "Stanley was very helpful, I just gave him a 4 due his lack of enthusiasm, daily.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 8,
+    "tutor_id": 3
+  },
+  {
+    "rating": 5,
+    "review": "Darrell was a great tutor, always to the point and friendly.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 7,
+    "tutor_id": 4
+  },
+  {
+    "rating": 5,
+    "review": "I can't recommend Pam enough, she was so nice and knew anything I had to throw at her.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 6,
+    "tutor_id": 5
+  },
+  {
+    "rating": 5,
+    "review": "Jim was awesome. Very helpful and put things in a simple manner I could understand.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 5,
+    "tutor_id": 6
+  },
+  {
+    "rating": 1,
+    "review": "Toby was very informative on the subject matter, but never seemed interested in being in the session.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 4,
+    "tutor_id": 7
+  },
+  {
+    "rating": 4,
+    "review": "Kelly was very nice and knew the matierial. I just can't give her a 5 for how much she brought up this other tutor Ryan.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 3,
+    "tutor_id": 8
+  },
+  {
+    "rating": 3,
+    "review": "Ryan was helpful most of the time. It was just the arrogance. He claimed he would own 2u someday.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 2,
+    "tutor_id": 9
+  },
+  {
+    "rating": 2,
+    "review": "Kevin was a funny dude to work with. But when I asked how toast and pancakes work, he replied, whenever I make a taco I get too excited, and crush it. This was our last session.",
+    "daytime": false,
+    "nights": true,
+    "weekends": false,
+    "user_id": 1,
+    "tutor_id": 10
+  }
+]

@@ -1,15 +1,88 @@
 :root {
-    --primary: #3d5852;
-    --secondary: #86938f;
-    --tertiary: #5e877f;
-    --quatrinary: #6c6b67;
-    --light: #e3e4e3;
-    --dark: #182c23;
-    --error: rgb(228, 46, 1);
-    --border-radius: 0.3rem;
+    --primary: #28302F;
+    --secondary: #747867;
+    --background: #D1D1D1;
+    --textPrimary: #FFFFFF;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--background);
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  #nav {
+    background-color: var(--primary);
   }
   
-  body {
+  .navBtn {
+    background-color: var(--secondary);
+    color: var(--textPrimary);
+  }
+
+  .dropdown-menu-dark {
+    background: #28302fdc;
+    color: var(--textPrimary);
+  }
+
+
+ 
+
+  #footer {
+    background-color: var(--primary);
+    color: var(--textPrimary);
+  }
+
+  .background {
+    height: 450px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("/assets/TutorTea.png");
+    background-size: cover;
+    background-position: center;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+#test {
+  height: 650px;
+}
+
+#offcanvasNavbar {
+  background-color: var(--textPrimary);
+}
+
+#scrollTop {
+  display: none;
+  position: fixed;
+  bottom: 4rem;
+  right: 1.7rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #343a40;
+  border: solid 1px #343a40;
+  text-align: center;
+  background: #fff;
+  font-size: .8rem;
+  z-index: 999;
+  cursor: pointer;
+  transition: border-color, color, background-color, bottom .5s ease-out;
+}
+
+#scrollTop:hover {
+  font-weight: bolder;
+  text-shadow: var(--text-shadow);
+}
+
+
+  /* body {
     font-family: Arial;
     margin: 0;
     display: flex;
@@ -48,6 +121,8 @@
     text-align: left;
     color: var(--light);
   }
+  
+
   
   nav {
     display: flex;
@@ -104,6 +179,8 @@
     padding: 10px 20px;
     font-weight: bold;
   }
+
+*/
   
   /* CARDS */
   .card {
@@ -162,5 +239,3 @@
     align-content: flex-start;
     align-items: center;
   }
-
-  
