@@ -6,7 +6,7 @@ const logout = async () => {
 
   if (response.ok) {
     document.location.replace(
-      "/logout/?toast=" + uriencoded("You've been logged out. Tea you later.")
+      "/logout/?toast=" + encodeURI("You've been logged out. Tea you later.")
     );
   } else {
     alert("Failed to log out.");

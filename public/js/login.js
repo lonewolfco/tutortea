@@ -1,87 +1,88 @@
 window.onload = function () {
+  const loginFormHandler = async (event) => {
+    event.preventDefault();
 
-const loginFormHandler = async (event) => {
-  event.preventDefault();
+    const username = document.querySelector(".username-login").value.trim();
+    const password = document.querySelector(".password-login").value.trim();
 
-  const username = document.querySelector(".username-login").value.trim();
-  const password = document.querySelector(".password-login").value.trim();
+    const userValidation = document.querySelector(".userValidation");
 
-  const userValidation = document.querySelector(".userValidation");
+    if (username && password) {
+      const response = await fetch("/api/user/login", {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-  if (username && password) {
-    const response = await fetch("/api/user/login", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
-
-    if (response.ok) {
-      document.location.replace("/");
-    } else {
-      const invalidResponse = await response.json();
-      userValidation.classList.remove("d-none");
-      userValidation.innerHTML = invalidResponse.message;
+      if (response.ok) {
+        document.location.replace("/");
+      } else {
+        const invalidResponse = await response.json();
+        userValidation.classList.remove("d-none");
+        userValidation.innerHTML = invalidResponse.message;
+      }
     }
-  }
-};
+  };
 
-const loginFormHandler1 = async (event) => {
-  event.preventDefault();
+  const loginFormHandler1 = async (event) => {
+    event.preventDefault();
 
-  const username = document.querySelector(".username-login1").value.trim();
-  const password = document.querySelector(".password-login1").value.trim();
+    const username = document.querySelector(".username-login1").value.trim();
+    const password = document.querySelector(".password-login1").value.trim();
 
-  const userValidation = document.querySelector(".userValidation");
+    const userValidation = document.querySelector(".userValidation");
 
-  if (username && password) {
-    const response = await fetch("/api/user/login", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    if (username && password) {
+      const response = await fetch("/api/user/login", {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    if (response.ok) {
-      document.location.replace(
-        "/?toast=" + encodeURI("You're logged in! Bottoms up!")
-      );
-    } else {
-      document.location.replace(
-        "/login/?toast=" +
-          encodeURI(
-            "Invalid user name or password. (Min 8 alphanumeric characters)"
-          )
-      );
+      if (response.ok) {
+        document.location.replace(
+          "/?toast=" + encodeURI("You're logged in! Bottoms up!")
+        );
+      } else {
+        document.location.replace(
+          "/login/?toast=" +
+            encodeURI(
+              "Invalid user name or password. (Min 8 alphanumeric characters)"
+            )
+        );
+      }
     }
-  }
-};
+  };
 
-const signupFormHandler = async (event) => {
-  event.preventDefault();
+  const signupFormHandler = async (event) => {
+    event.preventDefault();
 
-  const username = document.querySelector(".username-signup").value.trim();
-  const password = document.querySelector(".password-signup").value.trim();
+    const username = document.querySelector(".username-signup").value.trim();
+    const password = document.querySelector(".password-signup").value.trim();
 
-  const userCreateValidation = document.querySelector(".userCreateValidation");
+    const userCreateValidation = document.querySelector(
+      ".userCreateValidation"
+    );
 
-  if (username && password) {
-    const response = await fetch("/api/user", {
-      method: "POST",
-      body: JSON.stringify({ username, password }),
-      headers: { "Content-Type": "application/json" },
-    });
+    if (username && password) {
+      const response = await fetch("/api/user", {
+        method: "POST",
+        body: JSON.stringify({ username, password }),
+        headers: { "Content-Type": "application/json" },
+      });
 
-    if (response.ok) {
-      document.location.replace(
-        "/?toast=" + encodeURI(`Welcome ${username}! Bottoms up!`)
-      );
-    } else {
-      const duplicateUser = await response.json();
-      userCreateValidation.classList.remove("d-none");
-      userCreateValidation.innerHTML = duplicateUser.message;
+      if (response.ok) {
+        document.location.replace(
+          "/?toast=" + encodeURI(`Welcome ${username}! Bottoms up!`)
+        );
+      } else {
+        document.location.replace(
+          "/login/?toast=" +
+            encodeURI(`This username is invalid or already taken! Try again!`)
+        );
+      }
     }
-  }
-};
-
+  };
 
   document
     .querySelector(".login-form")
