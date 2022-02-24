@@ -160,8 +160,10 @@
 
     </main>
 
+    {{#if toast}}
+          {{> toast}}
+    {{/if}}
     {{! FOOTER }}
-
     <div id="footer" class="row position-absolute-bottom bottom-0">
       <footer
         class="py-3 d-flex flex-wrap justify-content-between align-items-center mx-auto my-auto"
