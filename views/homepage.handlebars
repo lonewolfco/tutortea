@@ -1,17 +1,69 @@
 
     {{!-- homepage body code --}}
+<h1 class="text-center p-2" style="font-family:BellandLamb; font-size:3rem;background-color:white">Spill the tea on your tutor ...<br> or find a new tutor that fits your acquired taste</h1>
+<section
+  id = "dashboard" class=" row row-cols-1 row-cols-md-3 row-cols-xl-3  p-1 m-0" style="color:white">
 
-    {{!-- //TODO: Adjust background image styling --}}
-    <section class="background">
+  <div class="col ">
+    <div class="shadow p-3 mb-5 bg-body rounded card dashCards">
+      <div class="card-body ">
+        <h5 class="card-title bg-dark rounded p-2">Search Tutors + Reviews</h5>
+        <h5 class="card-text p-2">
+          Find existing or new tutors!</h5>
+        
+          <a href="/tutor" id="searchButton" class="submitBtn btn btn-md btn-dark">
+            <i
+              class="bi bi-search text-center"
+              alt="search-image"
+              style="font-size: 1rem; color: #D1D1D1"
+            ></i>
+            Search</a>
+     
+      </div>
+    </div>
+  </div>
 
-    {{!-- //TODO: Homepage feature layout --}}
+  <div class="col">
+    <div class="card shadow p-3 mb-5 bg-body rounded dashCards">
 
-    </section>
-    {{#if toast}}
+      <div class="card-body ">
+        <h5  href="./spilltea" class="card-title bg-dark rounded p-2" >Spill some tea!</h5>
+        <h5 class="card-text p-2">Review a tutor, it'll feel good!</h5>
+     
+          <a href="/spilltea" id="createButton"
+             class="submitBtn btn btn-md btn-dark">
+            <i
+              class="bi bi-plus-circle text-center"
+              alt="search-image"
+              style="font-size: 1.10rem; color: #D1D1D1"
+            ></i>
+            Create</a>
+     
+      </div>
+    </div>
+  </div>
 
-      {{> toast}}
+  <div class="col">
+    <div class="card shadow p-3 mb-5 bg-body rounded dashCards">
+      <div class="card-body ">
+        <h5 class="card-title bg-dark rounded p-2">My Reviews </h5>
+         <h5 class="card-text p-2">View, edit, or delete your existing tutors
+          reviews.</h5>
+        
+          <a href="/view" id="updateButton" class="submitBtn btn btn-md btn-dark">
+            <i
+              class="bi bi-pencil-fill text-center"
+              alt="share-image"
+              style="font-size: 1rem; color: #D1D1D1"
+            ></i>
+            Update</a>
+       
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
 
-{{/if}}
 
 
 
