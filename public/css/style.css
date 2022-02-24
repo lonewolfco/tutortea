@@ -1,53 +1,51 @@
 :root {
-    --primary: #28302F;
-    --secondary: #747867;
-    --background: #D1D1D1;
-    --textPrimary: #FFFFFF;
-  }
+  --primary: #28302f;
+  --secondary: #747867;
+  --background: #d1d1d1;
+  --textPrimary: #ffffff;
+}
 
-  body {
-    margin: 0;
-    min-height: 100vh;
-    background-color: var(--background);
-  }
+@font-face {
+  font-family: "BellandLamb";
+  src: url("/assets/Bell-and-lamb.otf") format("opentype");
+}
 
-  a {
-    text-decoration: none;
-  }
+body {
+  margin: 0;
+  max-height: 100vh;
+  min-width: 100vw;
+  background-color: var(--background);
+  background-image: url("/assets/TeaCupsOpacity28.png");
+  background-size: 6rem;
+  background-repeat: repeat;
+  background-position: center;
+}
 
-  #nav {
-    background-color: var(--primary);
-  }
-  
-  .navBtn {
-    background-color: var(--secondary);
-    color: var(--textPrimary);
-  }
+a {
+  text-decoration: none;
+}
 
-  .dropdown-menu-dark {
-    background: #28302fdc;
-    color: var(--textPrimary);
-  }
+#nav {
+  background-color: var(--primary);
+}
 
+.navBtn {
+  background-color: var(--secondary);
+  color: var(--textPrimary);
+}
 
- 
+.dropdown-menu-dark {
+  background: #28302fdc;
+  color: var(--textPrimary);
+}
 
-  #footer {
-    background-color: var(--primary);
-    color: var(--textPrimary);
-  }
-
-  .background {
-    height: 450px;
-    width: 100%;
-    margin-bottom: 25px;
-    background-image: url("/assets/TutorTea.png");
-    background-size: cover;
-    background-position: center;
-    display:flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+#footer {
+  background-color: var(--primary);
+  color: var(--textPrimary);
+  z-index: 0;
+  position:bottom;
+  position:fixed;
+  width:100vw;
 }
 
 #test {
@@ -70,10 +68,10 @@
   border: solid 1px #343a40;
   text-align: center;
   background: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
   z-index: 999;
   cursor: pointer;
-  transition: border-color, color, background-color, bottom .5s ease-out;
+  transition: border-color, color, background-color, bottom 0.5s ease-out;
 }
 
 #scrollTop:hover {
@@ -81,161 +79,91 @@
   text-shadow: var(--text-shadow);
 }
 
+/* CARDS */
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
 
-  /* body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-    background-color: var(--quatrinary);
-  }
-  
-  a {
-    color: var(--dark);
-    text-decoration: none;
-  }
-  
-  a:visited {
-    color: inherit;
-  }
-  
-  header {
-    padding: 40px;
-    text-align: center;
-    background: var(--primary);
-    color: var(--light);
-  }
-  
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-  }
-  
-  aside {
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
-    text-align: left;
-    color: var(--light);
-  }
-  
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: #577a7c;
+  color: var(--light);
+}
 
-  
-  nav {
-    display: flex;
-    background-color: var(--secondary);
-  }
-  
-  nav a {
-    color: var(--light);
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  nav a:hover {
-    color: var(--secondary);
-    background-color: var(--dark);
-  }
-  
-  .gallery {
-    flex: 4;
-    background-color: #fff;
-    padding: 50px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 100%;
-    transition: color 0.1s;
-    margin-left: 16px;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .painting {
-    width: 50%;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-bottom: 25px;
-  }
-  
-  .painting-details {
-    text-align: center;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
+.card header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
 
-*/
-  
-  /* CARDS */
-  .card {
-    margin: 20px;
-    flex: 0 1 300px;
-    border: 7px double var(--dark);
-    border-radius: 10px;
-    background-color: var(--light);
-    color: var(--dark);
+.card-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.dashCards {
+  background-color: var(--secondary) !important;
+  opacity: 0.8;
+}
+
+.signup-form,
+.submit-review,
+.signup-form1 {
+  background-color: var(--secondary) !important;
+  opacity: 0.8;
+  color: var(--textPrimary);
+}
+
+#newHere {
+  display: flex;
+  justify-content: center !important;
+}
+
+.submitBtn {
+  text-decoration: none;
+}
+.submitBtn:hover {
+  background-color: #cecece;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-page {
+  justify-content: center !important;
+}
+
+/* LAYOUT */
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.signup-form,
+.signup-form1 {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 760px){
+  #footer{
+    position:relative!important;
   }
-  
-  .login-card {
-    margin: 0 0 20px 0;
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 5px;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    border-style: double;
-    border-width: thick;
-    background-color: #577a7c;
-    color: var(--light);
-  }
-  
-  .card header {
-    color: var(--light);
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0;
-    background-color: var(--tertiary);
-    padding: 0.625rem;
-    border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
-  }
-  
-  .card-body {
-    font-size: 1.4rem;
-    text-align: center;
-    font-weight: bold;
-  }
-  
-  .gallery-name {
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 5px var(--secondary);
-    border: 10px groove var(--light);
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-right: 100px;
-    padding-left: 100px;
-  }
-  
-  /* LAYOUT */
-  .container {
-    display: flex;
-    flex-flow: column wrap;
-    align-content: flex-start;
-    align-items: center;
-  }
+}

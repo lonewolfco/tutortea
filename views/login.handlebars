@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="/css/buttonstyle.css" />
 
- <link rel="stylesheet" href="/css/buttonstyle.css">
+{{! <form class="login-form rounded-3 row g-2 m-2 p-2 " style = "background-color: rgb(96, 108, 56, .2)">
 
-{{!-- <form class="login-form rounded-3 row g-2 m-2 p-2 " style = "background-color: rgb(96, 108, 56, .2)">
+
 <h2 class = "pt-2 pb-4 border-bottom border-3 border-white">Existing Users: Login</h2>
 <div class="userValidation d-none ">Testing this</div>
   <div class="col-md-12">
@@ -17,27 +18,42 @@
   <div class="gy-3 py-3 my-3 text-center col-12">
     <button type="submit" class=" btn submitBtn btn-lg btn-dark">Sign in</button><br><br>
   </div>
-</form> --}}
+</form> }}
 
-<br>
+<br />
 
+<div id="newHere">
+  <form
+    class="signup-form d-flex justify-content-center row row-cols-12 rounded-3 row g-2 m-2 p-2 w-50"
+  >
+    <h2
+      class="text-start pt-2 pb-4 border-bottom border-3"
+      style="border-color: #283130"
+    >New Users: Create Account</h2>
+    <div class="userCreateValidation d-none">Please enter a username that is
+      8-15 characters</div>
+    <div class="col-md-12">
+      <label for="username" class="form-label">Username</label>
+      <input type="username" class="form-control username-signup" />
 
-<form class="signup-form rounded-3 row g-2 m-2 p-2 ">
-  <h2 class="text-start pt-2 pb-4 border-bottom border-3" style="border-color: #283130">New Users: Create Account</h2>
-    <div class="userCreateValidation d-none">Please enter a username that is 8-15 characters</div>
-  <div class="col-md-12">
-    <label for="username" class="form-label">Username</label>
-    <input type="username" class="form-control" id="username-signup">
-   
-  </div>
-  <div class="col-md-12">
-    <label for="inputPassword4" class="form-label">Password</label>
-    <input type="password" class="form-control" id="password-signup">
-  </div>
-  <div class="gy-3 py-3 my-3 text-center col-12">
-    <button type="submit" class="btn submitBtn btn-lg btn-dark">Sign Up</button> 
-  </div>
-</form>
+    </div>
+    <div class="col-md-12">
+      <label for="inputPassword4" class="form-label">Password</label>
+      <input type="password" class="form-control password-signup" />
+
+    </div>
+
+    <div class="gy-3 py-3 my-3 text-center col-12">
+      <button
+        type="submit"
+        class="btn submitBtn btn-lg btn-dark"
+        style="color:white"
+      >Sign Up</button>
+
+    </div>
+
+  </form>
+
 </div>
 
-<script src="/js/login.js"></script>
+<br />

@@ -1,5 +1,5 @@
 .rating-css div {
-  color: var(--primary);
+  color: rgb(40,48,47,.4);
   font-size: 30px;
   font-family: sans-serif;
   font-weight: 800;
@@ -16,7 +16,7 @@
   cursor: pointer;
 }
 .rating-css input:checked + label ~ label {
-  color: var(--light);
+  color: white;
 }
 .rating-css label:active {
   transform: scale(0.8);
