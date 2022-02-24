@@ -56,14 +56,19 @@
           <div class="col-sm-6">
             <h1 class="text-center">Name:</h1>
             <ul class="text-center text-sm-center">
-          
+          {{#each tutors as |tutor|}}
+          <li>{{tutor.name}}</li>
+        {{/each}}
             </ul>
           </div>
 
           <div class="col-sm-6">
             <h1 class="text-center">Email:</h1>
             <ul class="text-center text-sm-center">
-          
+  {{#each tutors as |tutor|}}
+          <li>{{tutor.email}}</li>
+        {{/each}}
+
             </ul>
           </div>
         </div>
