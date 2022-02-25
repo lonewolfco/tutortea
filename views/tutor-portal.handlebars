@@ -36,7 +36,7 @@
               />
             </div>
 
-            <button id="tutor-button" type="submit" class="btn btn-primary btn-outline-dark">
+            <button id="tutor-button" \type="submit" class="btn btn-primary btn-outline-dark">
               Submit
             </button>
           </div>
@@ -50,29 +50,55 @@
         </div>
       </div>
 
-      <div class="container tutor-list p-5 text-center">
+     
+
+
+       <div class="container tutor-list p-5 text-center">
         <h1>Active Tutors</h1>
         <div class="row row-cols-sm-2 overflow-auto w-100 px-3 list-padding">
           <div class="col-sm-6">
             <h1 class="text-center">Name:</h1>
-            <ul class="text-center text-sm-center">
+                 <ul class="text-center text-sm-center">
           {{#each tutors as |tutor|}}
-          <li>{{tutor.name}}</li>
+          <li>
+            <input class="textarea" name="tutor-email" type="text" value="{{tutor.email}}"/>
+            </li>
         {{/each}}
             </ul>
           </div>
 
           <div class="col-sm-6">
             <h1 class="text-center">Email:</h1>
-            <ul class="text-center text-sm-center">
+                <ul class="text-center text-sm-center">
   {{#each tutors as |tutor|}}
-          <li>{{tutor.email}}</li>
+          <li> 
+            <input class="textarea" name="tutor-name" type="text" value="{{tutor.name}}"/>
+            </li>
         {{/each}}
 
             </ul>
+          </div>
+
+          <div>
+            <button
+              id="update-button"
+              class="px-4 my-4 col col-sm- btn btn-success"
+              type="button"
+            >
+              Update
+            </button>
+          </div>
+          <div>
+            <button
+              id="delete-button"
+              class="col px-4 my-4 col-sm- btn btn-danger"
+              type="button"
+            >
+              Delete
+            </button>
           </div>
         </div>
       </div>
     </main>
 
-    <script src="js/tutor-portal.js"></script>
+    <script src="js/tutor-portal.js"></script> 
