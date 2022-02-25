@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
 // Login route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect(307,"/");
     return;
   }
   res.render("login", {
@@ -44,7 +44,7 @@ router.get("/spilltea", withAuth, async (req, res) => {
 // Logout route
 router.get("/logout", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect("/");
+    res.redirect(307,"/");
     return;
   }
   res.render("logout", {
