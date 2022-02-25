@@ -1,5 +1,6 @@
 <div class="logout-page d-flex row row-cols-12">
   <form
+    id="login-form1"
     class="login-form1 row rounded-3 g-2 m-2 p-2 w-50"
     style="background-color: rgb(255,255,255,.8);"
   >
@@ -9,12 +10,12 @@
     <div class="userValidation d-none"></div>
     <div class="col-md-12">
       <label for="username" class="form-label">Username</label>
-      <input type="username" class="form-control username-login1" />
+      <input id="username-login1" type="username" class="form-control" />
     </div>
 
     <div class="col-md-12">
       <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control password-login1" />
+      <input id="password-login1" type="password" class="form-control" />
 
     </div>
     <div class="gy-3 py-3 my-3 text-center col-12">
@@ -22,7 +23,7 @@
     </div>
   </form>
 
-  <form class="signup-form1 row rounded-3 g-2 m-2 p-2 w-50">
+  <form id="signup-form" class="row rounded-3 g-2 m-2 p-2 w-50 signup-form">
     <h2
       class="text-start pt-2 pb-4 border-bottom border-3"
       style="border-color: #283130"
@@ -31,17 +32,23 @@
       8-15 characters</div>
     <div class="col-md-12">
       <label for="username" class="form-label">Username</label>
-      <input type="username" class="form-control username-signup" />
+      <input
+        id="username-signup"
+        type="username"
+        class="form-control username-signup"
+      />
 
     </div>
     <div class="col-md-12">
       <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control password-signup" />
+      <input
+        id="password-signup"
+        type="password"
+        class="form-control password-signup"
+      />
     </div>
     <div class="gy-3 py-3 my-3 text-center col-12">
       <button type="submit" class="btn btn-lg btn-dark">Sign Up</button>
     </div>
   </form>
 </div>
-
-<script src="js/login.js"></script>

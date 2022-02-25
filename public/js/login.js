@@ -2,16 +2,21 @@ window.onload = function () {
   const loginFormHandler = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector(".username-login").value.trim();
-    const password = document.querySelector(".password-login").value.trim();
+    const username = $("#username-login").val().trim();
+    const password = $("#password-login").val().trim();
 
     const userValidation = document.querySelector(".userValidation");
 
     if (username && password) {
       const response = await fetch("/api/user/login", {
         method: "POST",
-        body: JSON.stringify({ username, password }),
-        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username,
+          password
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        },
       });
 
       if (response.ok) {
@@ -27,29 +32,29 @@ window.onload = function () {
   const loginFormHandler1 = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector(".username-login1").value.trim();
-    const password = document.querySelector(".password-login1").value.trim();
+    const username = $("#username-login1").val().trim();
+    const password = $("#password-login1").val().trim();
 
     const userValidation = document.querySelector(".userValidation");
 
     if (username && password) {
       const response = await fetch("/api/user/login", {
         method: "POST",
-        body: JSON.stringify({ username, password }),
-        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username,
+          password
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        },
       });
 
       if (response.ok) {
-        document.location.replace(
-          "/?toast=" + encodeURI("You're logged in! Bottoms up!")
-        );
+        document.location.replace("/");
       } else {
-        document.location.replace(
-          "/login/?toast=" +
-            encodeURI(
-              "Invalid user name or password. (Min 8 alphanumeric characters)"
-            )
-        );
+        const invalidResponse = await response.json();
+        userValidation.classList.remove("d-none");
+        userValidation.innerHTML = invalidResponse.message;
       }
     }
   };
@@ -57,8 +62,8 @@ window.onload = function () {
   const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector(".username-signup").value.trim();
-    const password = document.querySelector(".password-signup").value.trim();
+    const username = $("#username-signup").val().trim();
+    const password = $("#password-signup").val().trim();
 
     const userCreateValidation = document.querySelector(
       ".userCreateValidation"
@@ -67,8 +72,13 @@ window.onload = function () {
     if (username && password) {
       const response = await fetch("/api/user", {
         method: "POST",
-        body: JSON.stringify({ username, password }),
-        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          username,
+          password
+        }),
+        headers: {
+          "Content-Type": "application/json"
+        },
       });
 
       if (response.ok) {
@@ -78,25 +88,28 @@ window.onload = function () {
       } else {
         document.location.replace(
           "/login/?toast=" +
-            encodeURI(`This username is invalid or already taken! Try again!`)
+          encodeURI(`This username is invalid or already taken! Try again!`)
         );
       }
     }
   };
 
-  document
-    .querySelector(".login-form")
-    .addEventListener("submit", loginFormHandler);
+  $('#login-form').submit(loginFormHandler);
+  $('#login-form1').submit(loginFormHandler1);
+  $('#signup-form').submit(signupFormHandler);
+  // document
+  //   .querySelector(".login-form")
+  //   .addEventListener("submit", loginFormHandler);
 
-  document
-    .querySelector(".signup-form1")
-    .addEventListener("submit", signupFormHandler);
+  // document
+  //   .querySelector(".signup-form1")
+  //   .addEventListener("submit", signupFormHandler);
 
-  document
-    .querySelector(".login-form1")
-    .addEventListener("submit", loginFormHandler1);
+  // document
+  //   .querySelector(".login-form1")
+  //   .addEventListener("submit", loginFormHandler1);
 
-  document
-    .querySelector(".signup-form")
-    .addEventListener("submit", signupFormHandler);
+  // document
+  //   .querySelector(".signup-form")
+  //   .addEventListener("submit", signupFormHandler);
 };
