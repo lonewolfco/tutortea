@@ -20,58 +20,11 @@ const submitTutor = async (event) => {
   
 };
 
-async function deleteFormHandler(event) {
-  event.preventDefault();
-  
-  const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
-
-  const response = await fetch(`/api/tutor/${id}`, {
-      method: 'DELETE',
-      body: JSON.stringify({
-        post_id: id
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    
-    if (response.ok) {
-      document.location.replace('/dashboard/');
-    } else {
-      alert(response.statusText);
-    }
-  
-}
 
 
-async function editFormHandler(event) {
-  event.preventDefault();
 
-  const tutorName= document.querySelector('input[name="tutor-name"]').value;
-  const tutorEmail = document.querySelector('input[name="tutor-email"]').value;
-  const id = window.location.toString().split('/')[
-      window.location.toString().split('/').length - 1
-    ];
 
-  const response = await fetch(`/api/tutor/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({
-          tutorName,
-         tutorEmail
-      }),
-      headers: {
-          'Content-Type': 'application/json'
-      }
-    });
-    
-    if (response.ok) {
-      document.location.replace('/dashboard/');
-    } else {
-      alert(response.statusText);
-    }
-}
+
 
 
 
