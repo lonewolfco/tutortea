@@ -18,4 +18,4 @@ function advanceTeaFacts() {
   quoteBlock.innerHTML = quotes[currentIndex];
 }
 
-var teaFacts = setInterval(advanceTeaFacts, 2000);
+var teaFacts = setInterval(advanceTeaFacts, 8000);
