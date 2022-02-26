@@ -15,7 +15,7 @@ body {
   max-height: 100vh;
   min-width: 100vw;
   background-color: var(--background);
-  background-image: url("/assets/TeaCupsOpacity28.png");
+  background-image: url("/assets/TeacupsOpacity28.png");
   background-size: 10rem;
   background-repeat: repeat;
   background-position: center;
