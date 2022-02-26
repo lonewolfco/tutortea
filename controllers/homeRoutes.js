@@ -41,6 +41,24 @@ router.get("/spilltea", withAuth, async (req, res) => {
   });
 });
 
+// create review
+router.get("/sip", withAuth, async (req, res) => {
+  const reviewsData = await Review.findAll({
+    include: [{
+      model: Tutor
+    }]
+  }); // Server-side render
+
+  const reviews = reviewsData.map((review) => review.toJSON());
+
+  res.render("sip", {
+    reviews,
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
+  });
+});
+
 // Logout route
 router.get("/logout", (req, res) => {
   if (req.session.loggedIn) {

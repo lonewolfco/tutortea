@@ -1,0 +1,37 @@
+<section class="container review-list">
+  <table class="table">
+    <thead>
+      <tr>
+        <td scope="col">Tutor Name</td>
+        <td scope="col">Rating</td>
+        <td scope="col">Review</td>
+        <td scope="col">Availability</td>
+      </tr>
+    </thead>
+
+    {{#each reviews as |review|}}
+      <tr>
+        <td style="color:white;">
+          {{review.tutor.name}}
+        </td>
+        <td style="color:white;">
+          {{review.rating}}
+        </td>
+        <td style="color:white;">
+          {{review.review}}
+        </td>
+        <td style="color:white;">
+          {{#if review.daytime}}
+            Daytime
+          {{/if}}
+          {{#if review.weekends}}
+            Weekends
+          {{/if}}
+          {{#if review.nights}}
+            Nights
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</section>

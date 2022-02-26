@@ -43,9 +43,9 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
-  position:bottom;
-  position:fixed;
-  width:100vw;
+  position: bottom;
+  position: fixed;
+  width: 100vw;
 }
 
 #test {
@@ -125,7 +125,8 @@ a {
 
 .signup-form,
 .submit-review,
-.signup-form1 {
+.signup-form1,
+.review-list {
   background-color: var(--secondary) !important;
   opacity: 0.8;
   color: var(--textPrimary);
@@ -162,8 +163,8 @@ a {
   justify-content: center;
 }
 
-@media only screen and (max-width: 760px){
-  #footer{
-    position:relative!important;
+@media only screen and (max-width: 760px) {
+  #footer {
+    position: relative !important;
   }
 }
