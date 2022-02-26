@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
+const filter = require("leo-profanity");
 
 class Review extends Model {}
 
@@ -60,6 +61,16 @@ Review.init(
     },
   },
   {
+    hooks: {
+      beforeCreate: (reviewData) => {
+        reviewData.review = filter.clean(reviewData.review);
+        return reviewData;
+      },
+      beforeUpdate: (reviewData) => {
+        reviewData.review = filter.clean(reviewData.review);
+        return reviewData;
+      },
+    },
     sequelize,
     timestamps: true,
     freezeTableName: true,

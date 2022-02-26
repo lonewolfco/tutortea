@@ -16,7 +16,7 @@ body {
   min-width: 100vw;
   background-color: var(--background);
   background-image: url("/assets/TeaCupsOpacity28.png");
-  background-size: 6rem;
+  background-size: 10rem;
   background-repeat: repeat;
   background-position: center;
 }
@@ -43,9 +43,10 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
-  position:bottom;
-  position:fixed;
-  width:100vw;
+
+  position:relative;
+  position: bottom;
+  width: 100vw;
 }
 
 #test {
@@ -59,7 +60,7 @@ a {
 #scrollTop {
   display: none;
   position: fixed;
-  bottom: 4rem;
+  bottom: 7.2rem;
   right: 1.7rem;
   width: 40px;
   height: 40px;
@@ -125,13 +126,19 @@ a {
 
 .signup-form,
 .submit-review,
-.signup-form1 {
+.signup-form1,
+.review-list {
   background-color: var(--secondary) !important;
   opacity: 0.8;
   color: var(--textPrimary);
 }
+.login-form {
+  flex-direction:column;
+  justify-content:left;
+}
 
-#newHere {
+.login-form,
+.login-form1 #newHere {
   display: flex;
   justify-content: center !important;
 }
@@ -162,8 +169,28 @@ a {
   justify-content: center;
 }
 
-@media only screen and (max-width: 760px){
-  #footer{
-    position:relative!important;
+@media only screen and (max-width: 1024px) {
+  #footer {
+    position: relative !important;
+  }
+  #footer .quotes {
+    width: 50%;
+  }
+  #footer p.my-1 {
+    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #footer {
+    position: relative !important;
+    margin: 0 !important;
+  }
+  #footer footer {
+    flex-direction: column !important;
+  }
+  #footer .quotes {
+    width: 75%;
+    margin-bottom: 2rem;
   }
 }
