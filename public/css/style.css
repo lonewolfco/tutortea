@@ -50,7 +50,7 @@ a {
   color: var(--textPrimary);
   z-index: 0;
 
-  position:relative;
+  position: relative;
   position: bottom;
   width: 100vw;
 }
@@ -139,8 +139,8 @@ a {
   color: var(--textPrimary);
 }
 .login-form {
-  flex-direction:column;
-  justify-content:left;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .login-form,
@@ -164,7 +164,7 @@ a {
 
 /* LAYOUT */
 .container {
-  display: flex;
+  /* display: flex; */
   flex-flow: column wrap;
   align-items: center;
 }
