@@ -43,8 +43,9 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
+  position:relative;
   position: bottom;
-  position: fixed;
+ 
   width: 100vw;
 }
 
