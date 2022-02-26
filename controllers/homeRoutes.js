@@ -14,7 +14,6 @@ router.get("/", async (req, res) => {
       loggedIn: req.session.loggedIn,
       toast: req.query.toast,
     });
-
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -75,6 +74,27 @@ router.get("/logout", (req, res) => {
   }
   res.render("logout", {
     toast: req.query.toast,
+  });
+});
+
+router.get("/tutorportal", withAuth, async (req, res) => {
+  const tutorsData = await Tutor.findAll(); // Server-side render
+
+  const tutors = tutorsData.map((tutor) => tutor.toJSON());
+
+  res.render("tutor-portal", {
+    tutors,
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
+  });
+});
+
+router.get("/collab", async (req, res) => {
+  res.render("collabrewators", {
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
   });
 });
 

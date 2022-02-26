@@ -1,0 +1,31 @@
+
+
+  li {
+    list-style-type: none;
+  }
+
+  .list-padding{
+    padding-bottom: 30rem;
+  }
+  
+  
+  #tutor-button {
+    margin-bottom: 50px;
+    background-color: #5e877f !important;
+  }
+  
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+  
+  .main-content{
+  background-color: #182c23;
+    opacity: 0.9;
+    color: white;
+    border-radius: 10px;
+    padding: 10px 10px  10px 10px !important;
+  
+  }

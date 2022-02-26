@@ -1,0 +1,48 @@
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  section h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: black;
+    text-align: left;
+    
+  }
+  .collab{
+    margin-top: 100px !important;
+  }
+  #hero .col {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  }
+  
+  #hero .img-col{
+    justify-content: flex-end;
+    margin-top: 100px;
+  }
+  
+  #hero img {
+    max-width: 130% !important;
+  }
+  
+  
+  #hero .card {
+    box-shadow: 11px 7px 16px black;
+    border: 0;
+    text-align: center;
+  }
+  
+  .brew{
+   color: brown;
+  }
+  
+  p{
+    text-align: center;
+  }
+  
+  body {
+    background-color: white !important;
+  }
