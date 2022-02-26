@@ -43,8 +43,7 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
-  position: bottom;
-  position: fixed;
+  position: relative;
   width: 100vw;
 }
 
@@ -59,7 +58,7 @@ a {
 #scrollTop {
   display: none;
   position: fixed;
-  bottom: 4rem;
+  bottom: 7.2rem;
   right: 1.7rem;
   width: 40px;
   height: 40px;
@@ -125,16 +124,15 @@ a {
 
 .signup-form,
 .submit-review,
-.signup-form1 {
+.signup-form1,
+.review-list {
   background-color: var(--secondary) !important;
   opacity: 0.8;
   color: var(--textPrimary);
 }
 
 .login-form,
-.login-form1
-
-#newHere {
+.login-form1 #newHere {
   display: flex;
   justify-content: center !important;
 }
@@ -150,8 +148,6 @@ a {
 
 .logout-page {
   justify-content: center !important;
-
-
 }
 
 /* LAYOUT */
@@ -171,26 +167,24 @@ a {
   #footer {
     position: relative !important;
   }
-  #footer .quotes{
-    width:50%;
+  #footer .quotes {
+    width: 50%;
   }
-  #footer p.my-1{
-    margin-left:1rem;
+  #footer p.my-1 {
+    margin-left: 1rem;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   #footer {
     position: relative !important;
-    margin:0!important;
+    margin: 0 !important;
   }
-  #footer footer{
-    flex-direction:column!important;
+  #footer footer {
+    flex-direction: column !important;
   }
-  #footer .quotes{
-    width:75%;
-    margin-bottom:2rem;
+  #footer .quotes {
+    width: 75%;
+    margin-bottom: 2rem;
   }
 }
-
