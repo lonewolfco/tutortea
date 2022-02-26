@@ -43,7 +43,9 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
-  position: relative;
+
+  position:relative;
+  position: bottom;
   width: 100vw;
 }
 
@@ -129,6 +131,10 @@ a {
   background-color: var(--secondary) !important;
   opacity: 0.8;
   color: var(--textPrimary);
+}
+.login-form {
+  flex-direction:column;
+  justify-content:left;
 }
 
 .login-form,
