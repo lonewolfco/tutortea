@@ -34,6 +34,12 @@ a {
   color: var(--textPrimary);
 }
 
+#rightNavButton {
+  position: absolute;
+  right: 1rem;
+  
+}
+
 .dropdown-menu-dark {
   background: #28302fdc;
   color: var(--textPrimary);
