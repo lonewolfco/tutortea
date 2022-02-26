@@ -5,13 +5,15 @@ const { Tutor } = require("../../models");
 
 
 router.post("/", withAuthJson, async (req, res) => {
+  try {
     const tutorData = await Tutor.create(req.body);
     const tutor = tutorData.toJSON();
-    console.log(tutor);
-    res.json(tutor);
-  });
-
-
+    res.json(tutor);   
+}
+catch (err) {
+    res.status(400).json(err);
+}
+});
 
   router.put('/:id', async (req, res) => {
     try {
@@ -52,6 +54,6 @@ router.post("/", withAuthJson, async (req, res) => {
           res.status(500).json(err);
         });
 
-
+      });
 
 module.exports = router;

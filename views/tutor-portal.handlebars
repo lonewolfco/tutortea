@@ -3,13 +3,7 @@
 
 
 <main class="container d-flex justify-content-center main-content">
-      <div
-        class="col teacup img-fluid mx-lg-auto xs-mx-auto"
-        style="width: 40rem"
-      >
-        <img src="./assets/tutorlist.png" class="" alt="tea cup" />
-        <div class="card-body"></div>
-      </div>
+  
 
       <div class="row row-cols-sm-10 tutor-form">
         
@@ -41,13 +35,7 @@
             </button>
           </div>
         </form>
-        <div class="col" style="width: 18rem">
-          <img
-            src="./assets/pourtea.jpg"
-            class="card-img-top"
-            alt="tea kettle"
-          />
-        </div>
+    
       </div>
 
      
@@ -61,7 +49,8 @@
                  <ul class="text-center text-sm-center">
           {{#each tutors as |tutor|}}
           <li>
-            <input class="textarea" name="tutor-email" type="text" value="{{tutor.email}}"/>
+            <input class="textarea" name="tutor-email" type="text" value="{{tutor.name}}"/>
+            {{!-- update buton---tutor.id --}}
             </li>
         {{/each}}
             </ul>
@@ -72,7 +61,7 @@
                 <ul class="text-center text-sm-center">
   {{#each tutors as |tutor|}}
           <li> 
-            <input class="textarea" name="tutor-name" type="text" value="{{tutor.name}}"/>
+            <input class="textarea" name="tutor-name" type="text" value="{{tutor.email}}"/>
             </li>
         {{/each}}
 
