@@ -1,8 +1,8 @@
 const signupFormHandler = async (event) => {
   event.preventDefault();
-
-  const username = document.querySelector(".username-signup").value.trim();
-  const password = document.querySelector(".password-signup").value.trim();
+  console.log("made it here");
+  const username = $("#username-signup").val().trim();
+  const password = $("#password-signup").val().trim();
 
   const userCreateValidation = document.querySelector(".userCreateValidation");
 
@@ -18,15 +18,11 @@ const signupFormHandler = async (event) => {
         "/?toast=" + encodeURI(`Welcome ${username}! Bottoms up!`)
       );
     } else {
-      document.location.replace(
-        "/login/?toast=" +
-          encodeURI(`This username is invalid or already taken! Try again!`)
-      );
+      const invalidResponse = await response.json();
+      userCreateValidation.classList.remove("d-none");
+      userCreateValidation.innerHTML = invalidResponse.message;
     }
   }
-}
+};
 
-document
-  .querySelector(".signup-form")
-  .addEventListener("submit", signupFormHandler);
-
+$("#signup-form").submit(signupFormHandler);
