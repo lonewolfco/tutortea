@@ -76,7 +76,7 @@
                   class="dropdown-menu dropdown-menu-dark"
                   aria-labelledby="navbarDropdown"
                 >
-                  <form class="px-2 py-3 opacity-100 login-form">
+                  <form id="login-form" class="px-2 py-3 opacity-100 login-form">
                     <div class="mb-3">
                       <label
                         for="exampleDropdownFormEmail1"
@@ -84,6 +84,7 @@
                       >Username</label>
                       <input
                         type="username"
+                        id="username-login"
                         class="form-control username-login"
                         placeholder="Username"
                       />
@@ -95,6 +96,7 @@
                       >Password</label>
                       <input
                         type="password"
+                        id="password-login"
                         class="password-login form-control"
                         placeholder="Password"
                       />
@@ -137,9 +139,10 @@
                 class="dropdown-menu dropdown-menu-dark"
                 aria-labelledby="dropdownMenuButton2"
               >
-                <li><a class="dropdown-item" href="/spilltea">Spill the Tea</a></li>
-                <li><a class="dropdown-item" href="/drink">View Reviews</a></li>
                 <li><a class="dropdown-item" href="/tutorportal">Tutor List</a></li>
+                <li><a class="dropdown-item" href="/drink">View Reviews</a></li>
+                <li><a class="dropdown-item" href="/spilltea">Spill the Tea</a></li>
+           
                 <li><hr class="dropdown-divider" /></li>
                 <li><a
                     class="dropdown-item"
@@ -159,6 +162,7 @@
       {{{body}}}
 
     </main>
+    
 
     {{#if toast}}
           {{> toast}}
@@ -166,19 +170,31 @@
     {{! FOOTER }}
     <div id="footer" class="row position-absolute-bottom bottom-0">
       <footer
-        class="py-3 d-flex flex-wrap justify-content-between align-items-center mx-auto my-auto"
+        class="py-3 d-flex justify-content-between align-items-center"
       >
         <div
           id="footer-co"
-          class="col-12 col-md-4 d-flex justify-content-start align-items-center ps-2"
+          class="justify-content-start flex-start align-items-center ps-2"
         >
           <p class="my-1">&copy; Collabrewation </p>
-        </div>
+      </div>
+
+    <div class="quotes justify-content-center flex-middle">
+ 
+    {{!-- <div class="shadow py-1 px-4  bg-none rounded"> --}}
+    <aside class="title" style="color:white; font-family:BellandLamb; font-size:2.5rem">Famous Musings<br>
+      <div id="quoteBlock" style="color:white; font-family:sans-serif; font-size:1rem">   I swear to spill the <b>tea</b>, the whole <b>tea</b>, and nothing but the <b>tea</b> <i> ~ Collabrewators ~ </i>.
+        <h5 id="quote"></h5>
+      </div>
+   
+  </aside>
+  </div>
 
         <!-- Footer Icon Links -->
+        <div>
         <ul
           id="footer-logos"
-          class="nav col-12 col-md-4 justify-content-end list-unstyled d-flex pe-3"
+          class="nav justify-content-end flex-end align-items-middle list-unstyled pe-3 ml-auto"
         >
           <li class="ms-3"><a
               class="text-muted"
@@ -190,6 +206,7 @@
                 alt="GitHub Logo"
               /></a></li>
         </ul>
+        </div>
 
       </footer>
       <div id="scrollTop"> ↑ </div>
@@ -200,19 +217,17 @@
     {{#if loggedIn}}
       <script src="/js/logout.js"></script>
     {{/if}}
-
     <!-- link to bootstrap framework javascript, jQuery, and local javascript file -->
     <script
       src="https://d19m59y37dris4.cloudfront.net/sell/2-0/vendor/bootstrap/js/bootstrap.bundle.min.js"
-    ></script>
-    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    >
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/js/scrollUp.js"></script>
     <script src="/js/main.js"></script>
-
-
-
 
 </body>
 
 
 </html>
+<script src="/js/homepage.js"></script>

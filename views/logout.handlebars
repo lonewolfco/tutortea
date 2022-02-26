@@ -1,39 +1,54 @@
-<div class="logout-page d-flex row row-cols-12">
+<div class="logout-page d-flex row align-items-center row-cols-sm-1 row-cols-md-3 row-cols-lg-3 row-cols-xl-3  m-5">
   <form
-    class="login-form1 row rounded-3 g-2 m-2 p-2 w-50"
+    id="login-form1"
+    class="login-form1 row rounded-3 g-2 m-4 p-2"
     style="background-color: rgb(255,255,255,.8);"
   >
-    <h2 class="pt-2 pb-4 border-bottom border-3 border-black">Existing Users:
+    <h2 class="text-start pt-2 pb-4 border-bottom border-3 border-black">Existing Users:<br>
       Login</h2>
+    <div class="userValidation d-none"></div>
     <div class="col-md-12">
       <label for="username" class="form-label">Username</label>
-      <input type="username" class="form-control username-login1" />
+      <input id="username-login1" type="username" class="form-control" />
     </div>
 
     <div class="col-md-12">
       <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control password-login1" />
+      <input
+        id="password-login1"
+        type="password"
+        class="form-control password-login1"
+      />
 
     </div>
     <div class="gy-3 py-3 my-3 text-center col-12">
       <button type="submit" class="btn btn-lg btn-dark">Sign in</button>
     </div>
   </form>
-
-  <form class="signup-form1 row rounded-3 g-2 m-2 p-2 w-50">
+<br>
+<br>
+  <form id="signup-form1" class="signup-form1 row rounded-3 g-2 m-4 p-2">
     <h2
       class="text-start pt-2 pb-4 border-bottom border-3"
       style="border-color: #283130"
-    >New Users: Create Account</h2>
-
+    >New Users:<br>Create Account</h2>
+    <div class="userCreateValidation d-none"></div>
     <div class="col-md-12">
       <label for="username" class="form-label">Username</label>
-      <input type="username" class="form-control username-signup1" />
+      <input
+        id="username-signup1"
+        type="username"
+        class="form-control username-signup1"
+      />
 
     </div>
     <div class="col-md-12">
       <label for="inputPassword4" class="form-label">Password</label>
-      <input type="password" class="form-control password-signup1" />
+      <input
+        id="password-signup1"
+        type="password"
+        class="form-control password-signup1"
+      />
     </div>
     <div class="gy-3 py-3 my-3 text-center col-12">
       <button type="submit" class="btn btn-lg btn-dark">Sign Up</button>
@@ -41,4 +56,10 @@
   </form>
 </div>
 
+{{! Had to add in the jQuery link - wasn't working when it was only in main}}
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"
+></script>
 <script src="/js/loginsignup.js"></script>

@@ -1,8 +1,9 @@
 const loginFormHandler1 = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector(".username-login1").value.trim();
-  const password = document.querySelector(".password-login1").value.trim();
+  const username = $("#username-login1").val().trim();
+  const password = $("#password-login1").val().trim();
+  const userValidation = document.querySelector(".userValidation");
 
   if (username && password) {
     const response = await fetch("/api/user/login", {
@@ -16,12 +17,9 @@ const loginFormHandler1 = async (event) => {
         "/?toast=" + encodeURI(`You're logged in ${username}! Bottoms up!`)
       );
     } else {
-      document.location.replace(
-        "/logout/?toast=" +
-          encodeURI(
-            "Invalid user name or password. Min 8 alphanumeric characters."
-          )
-      );
+        const invalidResponse = await response.json();
+        userValidation.classList.remove("d-none");
+        userValidation.innerHTML = invalidResponse.message;
     }
   }
 };
@@ -29,8 +27,9 @@ const loginFormHandler1 = async (event) => {
 const signupFormHandler1 = async (event) => {
   event.preventDefault();
 
-  const username = document.querySelector(".username-signup1").value.trim();
-  const password = document.querySelector(".password-signup1").value.trim();
+    const username = $("#username-signup1").val().trim();
+    const password = $("#password-signup1").val().trim();
+    const userCreateValidation = document.querySelector(".userValidation");
 
   if (username && password) {
     const response = await fetch("/api/user", {
@@ -48,14 +47,12 @@ const signupFormHandler1 = async (event) => {
         "/login/?toast=" +
           encodeURI(`This username is invalid or already taken! Try again!`)
       );
+      const invalidResponse = await response.json();
+      userValidation.classList.remove("d-none");
+      userValidation.innerHTML = invalidResponse.message;
     }
   }
 };
 
-document
-  .querySelector(".login-form1")
-  .addEventListener("submit", loginFormHandler1);
-
-document
-  .querySelector(".signup-form1")
-  .addEventListener("submit", signupFormHandler1);
+$('#login-form1').submit(loginFormHandler1);
+$('#signup-form1').submit(signupFormHandler1);
