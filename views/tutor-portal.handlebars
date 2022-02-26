@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/tutorPortal.css" />
 
-<main class="container d-flex justify-content-center main-content">
+<main class="container d-flex justify-content-center main-content my-3">
 
   <div class="row row-cols-sm-10 tutor-form">
 
@@ -9,63 +9,52 @@
         <div class="card-body">
           <p>Add a Tutor!</p>
         </div>
+        <div>
+          <label class="form-label">Name</label>
+          <input type="name" class="form-control  mb-3" id="name" />
+        </div>
 
         <label class="form-label">Email</label>
-
-        <input
-          type="email"
-          class="form-control"
-          id="email"
-          aria-describedby="emailHelp"
-        />
         <div class="mb-3">
-          <label class="form-label">Name</label>
-          <input type="name" class="form-control" id="name" />
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            aria-describedby="emailHelp"
+          />
         </div>
 
         <button
           id="tutor-button"
           \type="submit"
-          class="btn btn-primary btn-outline-dark"
+          class="btn btn-primary btn-outline-dark mb-0"
         >
           Submit
         </button>
       </div>
     </form>
-
   </div>
-
-  <div class="container tutor-list p-5 text-center">
-    <h1>Active Tutors</h1>
-    <div class="row row-cols-sm-2 overflow-auto w-100 px-3 list-padding">
-      <div class="col-sm-6">
-        <h1 class="text-center">Name:</h1>
-        <ul class="text-center text-sm-center">
+  <div class="container d-flex tutor-list p-2 text-center">
+      <table class="table">
+          <p style="color:white; font-weight:bold; font-size:1.5rem">Active Tutors</p>
+    <thead class=" overflow-auto px-2 list-padding">
+      <tr style="color:white; font-weight:bold; font-size:1.15rem">
+        <td scope="col">Name: </td>
+        <td scope="col" >Email:</td>
+      </tr>
+    </thead>
           {{#each tutors as |tutor|}}
-            <li>
+          <tr style="color:white">
+        <td>
               {{tutor.name}}
-
-            </li>
-          {{/each}}
-        </ul>
-      </div>
-
-      <div class="col-sm-6">
-        <h1 class="text-center">Email:</h1>
-        <ul class="text-center text-sm-center">
-          {{#each tutors as |tutor|}}
-            <li>
-              {{tutor.email}}
-            </li>
+        </td>
+        <td>
+              {{tutor.email}}        
+        </td>
+        </tr>
           {{/each}}
 
-        </ul>
-      </div>
-
-      <div>
-
-      </div>
-      <div>
+      </table>
 
       </div>
     </div>

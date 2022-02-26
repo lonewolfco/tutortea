@@ -21,7 +21,7 @@ const submitReview = async (event) => {
 
   if (response.ok) {
     document.location.replace(
-      "/?toast=" + encodeURI("Review submitted successfully")
+      "/sip/?toast=" + encodeURI("Review submitted successfully")
     );
     const message = "Review submitted successfully";
   } else {
