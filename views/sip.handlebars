@@ -1,7 +1,7 @@
-<section class="container review-list">
+<section class="container review-list my-5">
   <table class="table">
     <thead>
-      <tr>
+      <tr style="color:white;">
         <td scope="col">Tutor Name</td>
         <td scope="col">Rating</td>
         <td scope="col">Review</td>
@@ -10,17 +10,17 @@
     </thead>
 
     {{#each reviews as |review|}}
-      <tr>
-        <td style="color:white;">
+      <tr style="color:white;">
+        <td>
           {{review.tutor.name}}
         </td>
-        <td style="color:white;">
+        <td>
           {{review.rating}}
         </td>
-        <td style="color:white;">
+        <td>
           {{review.review}}
         </td>
-        <td style="color:white;">
+        <td>
           {{#if review.daytime}}
             Daytime
           {{/if}}
