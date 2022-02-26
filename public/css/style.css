@@ -132,6 +132,10 @@ a {
   opacity: 0.8;
   color: var(--textPrimary);
 }
+.login-form {
+  flex-direction:column;
+  justify-content:left;
+}
 
 .login-form,
 .login-form1 #newHere {
