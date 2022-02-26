@@ -1,17 +1,17 @@
 
     {{!-- homepage body code --}}
-<h1 class="text-center p-2" style="font-family:BellandLamb; font-size:3rem;background-color:white">Spill the tea on your tutor ...<br> or find a new tutor that fits your acquired taste</h1>
+<h1 class="text-center p-2" style="font-family:BellandLamb; font-size:3rem;background-color:white">Find a new tutor or spill the tea on your current one</h1>
 <section
-  id = "dashboard" class=" row row-cols-1 row-cols-md-3 row-cols-xl-3  p-1 m-0" style="color:white">
+  id = "dashboard" class=" row row-cols-1 row-cols-md-2 row-cols-xl-2  p-1 m-0 justify-content-around" style="color:white">
 
   <div class="col ">
-    <div class="shadow p-3 mb-5 bg-body rounded card dashCards">
+    <div class="shadow p-3 mb-3 bg-body rounded card dashCards">
       <div class="card-body ">
-        <h5 class="card-title bg-dark rounded p-2">Search Tutors + Reviews</h5>
-        <h5 class="card-text p-2">
-          Find existing or new tutors!</h5>
+        <h5 class="card-title bg-dark rounded p-2">View Tutors</h5>
+        <h5 href="/tutor" class="card-text p-2">
+          Find a tutor or add your own.</h5>
         
-          <a href="/tutorportal" id="searchButton" class="submitBtn btn btn-md btn-dark">
+          <a href="/tutor" id="searchButton" class="submitBtn btn btn-md btn-dark">
             <i
               class="bi bi-search text-center"
               alt="search-image"
@@ -24,46 +24,62 @@
   </div>
 
   <div class="col">
-    <div class="card shadow p-3 mb-5 bg-body rounded dashCards">
+    <div class="card shadow p-3 mb-3 bg-body rounded dashCards">
 
       <div class="card-body ">
-        <h5  href="./spilltea" class="card-title bg-dark rounded p-2" >Spill some tea!</h5>
-        <h5 class="card-text p-2">Review a tutor, it'll feel good!</h5>
-     
-          <a href="/spilltea" id="createButton"
+        <h5  href="/view" class="card-title bg-dark rounded p-2" >See Reviews</h5>
+        <h5 class="card-text p-2">Let's drink up!</h5>
+  
+          <a href="/view"    id="updateButton"
              class="submitBtn btn btn-md btn-dark">
-            <i
-              class="bi bi-plus-circle text-center"
-              alt="search-image"
-              style="font-size: 1.10rem; color: #D1D1D1"
+           <i
+              class="bi bi-eye-fill text-center"
+              alt="share-image"
+              style="font-size: 1rem; color: #D1D1D1"
             ></i>
-            Create</a>
+            View</a>
      
       </div>
     </div>
   </div>
 
   <div class="col">
-    <div class="card shadow p-3 mb-5 bg-body rounded dashCards">
+    <div class="card shadow p-3 mb-3 bg-body rounded dashCards">
       <div class="card-body ">
-        <h5 class="card-title bg-dark rounded p-2">My Reviews </h5>
-         <h5 class="card-text p-2">View, edit, or delete your existing tutors
-          reviews.</h5>
+        <h5 class="card-title bg-dark rounded p-2">Spill some tea</h5>
+         <h5 href="/spilltea" class="card-text p-2">Post some love or shade</h5>
         
-          <a href="/view" id="updateButton" class="submitBtn btn btn-md btn-dark">
-            <i
-              class="bi bi-pencil-fill text-center"
-              alt="share-image"
-              style="font-size: 1rem; color: #D1D1D1"
+          <a href="/spilltea"  id="createButton" class="submitBtn btn btn-md btn-dark">
+              <i
+              class="bi bi-plus-circle text-center"
+              alt="search-image"
+              style="font-size: 1.10rem; color: #D1D1D1"
             ></i>
-            Update</a>
+            Share</a>
        
       </div>
     </div>
   </div>
   </div>
-</section>
 
+
+</section>
+<br><br>
+  
+  {{!-- IF QUOTES ARE INSIDE HOMEPAGE 
+  <div class="row row-cols-2 d-flex justify-content-center" style="margin-bottom:4rem">
+ 
+    <div class="shadow py-1 px-4  bg-body rounded">
+         <aside class="title" style="color:#606C38; font-family:BellandLamb; font-size:2.5rem">Famous Musings</<br>
+      <div id="quoteBlock" style="color:#2C3F2F; font-family:sans-serif; font-size:1rem">   I swear to spill the <b>tea</b>, the whole <b>tea</b>, and nothing but the <b>tea</b> <i> ~ Collabrewators ~ </i>.
+        <h5 id="quote"></h5>
+      </div>
+    </div>
+  </div>
+  </aside>
+  </div> --}}
+
+<script src="/js/homepage.js"></script>
 
 
 

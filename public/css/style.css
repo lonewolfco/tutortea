@@ -16,7 +16,7 @@ body {
   min-width: 100vw;
   background-color: var(--background);
   background-image: url("/assets/TeaCupsOpacity28.png");
-  background-size: 6rem;
+  background-size: 10rem;
   background-repeat: repeat;
   background-position: center;
 }
@@ -43,9 +43,9 @@ a {
   background-color: var(--primary);
   color: var(--textPrimary);
   z-index: 0;
-  position:bottom;
-  position:fixed;
-  width:100vw;
+  position: bottom;
+  position: fixed;
+  width: 100vw;
 }
 
 #test {
@@ -131,6 +131,11 @@ a {
   color: var(--textPrimary);
 }
 
+.login-form,
+.login-form1{
+  
+}
+
 #newHere {
   display: flex;
   justify-content: center !important;
@@ -147,6 +152,8 @@ a {
 
 .logout-page {
   justify-content: center !important;
+
+
 }
 
 /* LAYOUT */
@@ -162,8 +169,30 @@ a {
   justify-content: center;
 }
 
-@media only screen and (max-width: 760px){
-  #footer{
-    position:relative!important;
+@media only screen and (max-width: 1024px) {
+  #footer {
+    position: relative !important;
+  }
+  #footer .quotes{
+    width:50%;
+  }
+  #footer p.my-1{
+    margin-left:1rem;
   }
 }
+
+
+@media only screen and (max-width: 768px) {
+  #footer {
+    position: relative !important;
+    margin:0!important;
+  }
+  #footer footer{
+    flex-direction:column!important;
+  }
+  #footer .quotes{
+    width:75%;
+    margin-bottom:2rem;
+  }
+}
+
