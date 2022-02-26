@@ -1,6 +1,11 @@
 const router = require("express").Router();
-const { withAuth } = require("../utils/auth");
-const { Tutor, Review } = require("../models");
+const {
+  withAuth
+} = require("../utils/auth");
+const {
+  Tutor,
+  Review
+} = require("../models");
 
 // Use the custom middleware before allowing the user to access tutors and reviews
 router.get("/", async (req, res) => {
@@ -19,11 +24,11 @@ router.get("/", async (req, res) => {
 // Login route
 router.get("/login", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect(307,"/");
+    res.redirect(307, "/");
     return;
   }
   res.render("login", {
-    toast:req.query.toast,
+    toast: req.query.toast,
   });
 });
 
@@ -41,14 +46,35 @@ router.get("/spilltea", withAuth, async (req, res) => {
   });
 });
 
+// create review
+router.get("/sip", withAuth, async (req, res) => {
+  const reviewsData = await Review.findAll({
+    include: [{
+      model: Tutor
+    }],
+    order: [
+      ['createdAt', 'DESC']
+    ],
+  }); // Server-side render
+
+  const reviews = reviewsData.map((review) => review.toJSON());
+
+  res.render("sip", {
+    reviews,
+    loggedIn: req.session.loggedIn,
+    user_id: req.session.user_id,
+    username: req.session.username,
+  });
+});
+
 // Logout route
 router.get("/logout", (req, res) => {
   if (req.session.loggedIn) {
-    res.redirect(307,"/");
+    res.redirect(307, "/");
     return;
   }
   res.render("logout", {
-    toast:req.query.toast,
+    toast: req.query.toast,
   });
 });
 
