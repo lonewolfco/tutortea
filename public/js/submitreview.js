@@ -33,4 +33,3 @@ const submitReview = async (event) => {
 document
   .querySelector("#submit-review")
   .addEventListener("click", submitReview);
-

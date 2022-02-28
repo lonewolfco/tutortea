@@ -8,7 +8,9 @@
   <form class="submit-review rounded-3 row col-md-8 g-2 m-2 p-2">
 
     <h2
-      class="text-start pt-2 pb-4 border-bottom border-3" id="tryingAnything" value="{{myReview.tutor.id}}"
+      class="text-start pt-2 pb-4 border-bottom border-3"
+      id="tryingAnything"
+      value="{{myReview.tutor.id}}"
       style="border-color: #283130"
     >Spill The Tea</h2>
     <div class="col-md-12">
@@ -21,7 +23,7 @@
       />
     </div>
 
-    <div class="col-md-12" >
+    <div class="col-md-12">
       <label for="tutorname" class="form-label">Tutor</label>
       <div
         type="text"
@@ -88,15 +90,15 @@
         data-id="{{myReview.id}}"
       >Update
       </button>
+      <button
+        id="delete-review"
+        type="click"
+        class="btn btn-lg btn-dark col-4"
+        style="color:red; background-color:white"
+        data-id="{{myReview.id}}"
+      >Delete Review</button>
 
     </div>
-    <button
-      id="delete-review"
-      type="click"
-      class="btn btn-lg btn-dark col-4"
-      style="color:red; background-color:white"
-      data-id="{{myReview.id}}"
-    >Delete Review</button>
   </form>
 </div>
 

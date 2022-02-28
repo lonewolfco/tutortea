@@ -13,11 +13,11 @@ const editFormHandler = async (event) => {
     method: "PUT",
 
     body: JSON.stringify({
-        rating,
-        nights,
-        weekends,
-        daytime,
-        review,
+      rating,
+      nights,
+      weekends,
+      daytime,
+      review,
     }),
     headers: {
       "Content-Type": "application/json",
@@ -26,12 +26,12 @@ const editFormHandler = async (event) => {
 
   if (response.ok) {
     document.location.replace(
-      "/sip/?toast=" + encodeURI("Review updated successfully")
+      "/?toast=" + encodeURI("Review updated successfully")
     );
   } else {
     document.location.replace(
-        "/sip/?toast=" + encodeURI("Review updated successfully")
-      );
+      "/?toast=" + encodeURI("Review updated successfully")
+    );
   }
 };
 
