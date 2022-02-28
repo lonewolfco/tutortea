@@ -63,6 +63,10 @@ a {
   background-color: var(--textPrimary);
 }
 
+#smallScreenLinks {
+  display: none;
+}
+
 #scrollTop {
   display: none;
   position: fixed;
@@ -198,5 +202,12 @@ a {
   #footer .quotes {
     width: 75%;
     margin-bottom: 2rem;
+  }
+  #rightNavButton {
+    display: none;
+  }
+  #smallScreenLinks {
+    display: inline-flex;
+    
   }
 }
