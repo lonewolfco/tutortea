@@ -231,6 +231,7 @@ tbody tr:hover {
   #footer {
     position: relative !important;
     margin: 0 !important;
+    flex-direction: column !important;
   }
   #footer footer {
     flex-direction: column !important;
