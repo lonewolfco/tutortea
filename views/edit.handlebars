@@ -9,6 +9,8 @@
 
     <h2
       class="text-start pt-2 pb-4 border-bottom border-3"
+      id="tryingAnything"
+      value="{{myReview.tutor.id}}"
       style="border-color: #283130"
     >Spill The Tea</h2>
     <div class="col-md-12">
@@ -22,22 +24,14 @@
     </div>
 
     <div class="col-md-12">
-      <label for="tutorname" class="form-label">Select a Tutor</label>
-      <select
-        name="tutor-select"
-        type="select"
-        class="form-control"
-        id="tutor-select"
-      >
-        {{#each tutors as |tutor|}}
-          <option value="{{tutor.id}}">{{tutor.name}}</option>
-        {{/each}}
-      </select>
+      <label for="tutorname" class="form-label">Tutor</label>
+      <div
+        type="text"
+        class="form-control tutor-select oddestClass"
+        disabled="true"
+      >{{myReview.tutor.name}}
+      </div>
     </div>
-
-
-    
-    
 
     <div class="col-md-12" style="font-size:1rem">
 
@@ -47,21 +41,20 @@
       >
         <div class="flex-column align-center">
           <label for="daytime">daytime</label>
-          <input type="checkbox" id="daytime" name="daytime" />
+          <input class="daytime" type="checkbox" name="daytime" />
         </div>
         <div class="flex-column align-center">
           <label for="nights">nights</label>
-          <input type="checkbox" id="nights" name="nights" />
+          <input class="nights" type="checkbox" name="nights" />
         </div>
         <div class="flex-column align-center">
           <label for="weekends">weekends</label>
-          <input type="checkbox" id="weekends" name="weekends" />
+          <input class="weekends" type="checkbox" name="weekends" />
         </div>
       </div>
 
     </div>
 
-    
     <div class="col-md-12">
       <label for="rating" class="form-label">Rating: 1-5 cups!</label>
       <div class="rating-css">
@@ -84,15 +77,29 @@
       <textarea
         maxlength="100"
         class="form-control"
-        id="review"
+        id="myReview"
         name="review"
       ></textarea>
     </div>
-    <div class="gy-3 py-3 my-3 text-center col-12">
-      <button id="submit-review" type="submit" class="btn btn-lg btn-dark">Spill
-        It</button>
+    <div
+      class="gy-3 py-3 my-3 text-center justify-content-around row row-cols-12"
+    >
+      <button
+        type="submit"
+        class="btn btn-lg btn-dark col-4 edit-review"
+        data-id="{{myReview.id}}"
+      >Update
+      </button>
+      <button
+        id="delete-review"
+        type="click"
+        class="btn btn-lg btn-dark col-4"
+        style="color:red; background-color:white"
+        data-id="{{myReview.id}}"
+      >Delete Review</button>
+
     </div>
   </form>
 </div>
 
-<script src="/js/submitreview.js"></script>
+<script src="/js/editReview.js"></script>

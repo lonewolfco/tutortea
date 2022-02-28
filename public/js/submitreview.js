@@ -23,14 +23,13 @@ const submitReview = async (event) => {
     document.location.replace(
       "/sip/?toast=" + encodeURI("Review submitted successfully")
     );
-    const message = "Review submitted successfully";
   } else {
-    alert("Failed to submit review.");
+    document.location.replace(
+      "/?toast=" + encodeURI("You may have missed a field. Try again!")
+    );
   }
 };
 
 document
   .querySelector("#submit-review")
   .addEventListener("click", submitReview);
-
-module.exports = { message };

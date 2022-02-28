@@ -10,8 +10,14 @@
   
   
   #tutor-button {
-    margin-bottom: 50px;
-    background-color: #5e877f !important;
+    margin-bottom: 2rem;
+    background-color: #5e877f!important;
+    color:white;
+  }
+  #tutor-button:hover {
+    
+    background-color: #d1d1d1!important;
+    color:#28302f;
   }
   
   
@@ -22,7 +28,7 @@
   }
   
   .main-content{
-  background-color: #182c23;
+  background-color: #2C3F2F;
     opacity: 0.9;
     color: white;
     border-radius: 10px;

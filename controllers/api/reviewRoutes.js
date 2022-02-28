@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { withAuthJson } = require("../../utils/auth");
 const { Review, Tutor, User } = require("../../models");
 
-// POST /api/reviews -- create one review
+// POST /api/review -- create one review
 router.post("/", withAuthJson, async (req, res) => {
   try {
     const reviewData = await Review.create({
@@ -20,35 +20,34 @@ router.post("/", withAuthJson, async (req, res) => {
   }
 });
 
-// PUT /api/reviews/:id -- update one review
-router.put('/:id', (req, res) => {
-    Review.update(
-        {
-            rating: req.body.rating,
-            review: req.body.review,
-            daytime: req.body.daytime,
-            nights: req.body.nights,
-            weekends: req.body.weekends,
-            user_id: req.body.user_id,
-            tutor_id: req.body.tutor_id
+router.put("/:id", withAuthJson, async (req, res) => {
+// PUT /api/review/:id -- update one review
+;
+
+  try {
+    const updateReview = Review.update(
+      {
+        ...req.body,
+        user_id:req.session.user_id,
+      },
+      {
+        where: {
+          id: req.params.id,
         },
-        {
-            where: {
-                id: req.params.id,
-            },
-        }
-    )
-        .then((updatedReview) => {
-            res.json(updatedReview);
-        })
-        .catch((err) => {
-            console.log(err);
-            res.json(err);
-        });
+      }
+    );
+  
+    const update = updateReview.toJSON();
+    res.json(update);
+  } catch (err) {
+    res.status(400).json({
+      message: "Bad request",
+    });
+  }
 });
 
-// DELETE /api/reviews/:id -- delete one review
-router.delete("/:id", async (req, res) => {
+// DELETE /api/review/:id -- delete one review
+router.delete("/:id", withAuthJson, async (req, res) => {
   try {
     const reviewData = await Review.destroy({
       where: { id: req.params.id },

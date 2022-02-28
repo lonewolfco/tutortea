@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="/css/tutorPortal.css" />
 
-<main class="container d-flex justify-content-center main-content my-3">
+<main class="container d-flex justify-content-center main-content my-5">
 
   <div class="row row-cols-sm-10 tutor-form">
 
@@ -11,7 +11,7 @@
         </div>
         <div>
           <label class="form-label">Name</label>
-          <input type="name" class="form-control  mb-3" id="name" />
+          <input type="name" class="form-control mb-3" id="name" />
         </div>
 
         <label class="form-label">Email</label>
@@ -35,30 +35,33 @@
     </form>
   </div>
   <div class="container d-flex tutor-list p-2 text-center">
-      <table class="table">
-          <p style="color:white; font-weight:bold; font-size:1.5rem">Active Tutors</p>
-    <thead class=" overflow-auto px-2 list-padding">
-      <tr style="color:white; font-weight:bold; font-size:1.15rem">
-        <td scope="col">Name: </td>
-        <td scope="col" >Email:</td>
-      </tr>
-    </thead>
-          {{#each tutors as |tutor|}}
-          <tr style="color:white">
-        <td>
-              {{tutor.name}}
-        </td>
-        <td>
-              {{tutor.email}}        
-        </td>
+    <p style="color:white; font-weight:bold; font-size:1.5rem">Active Tutors</p>
+    <table class="table">
+      <thead class="overflow-auto px-2 list-padding">
+        <tr style="color:white; font-weight:bold; font-size:1.15rem">
+          <td scope="col">Name: </td>
+          <td scope="col">Email:</td>
         </tr>
-          {{/each}}
+      </thead>
+      <tbody>
+        {{#each tutors as |tutor|}}
+          <tr style="color:white">
+            <td>
+              {{tutor.name}}
+            </td>
+            <td class="tutor-emails"><a
+                href="mailto:{{tutor.email}}"
+                subject="To my future favorite tutor"
+              >
+                {{tutor.email}}
+              </a></td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
 
-      </table>
-
-      </div>
-    </div>
   </div>
+
 </main>
 
 <script src="js/tutor-portal.js"></script>
