@@ -27,11 +27,7 @@
       <!-- NAVBAR -->
       <nav class="navbar navbar-expand-md navbar-dark" id="nav">
         <div class="container-fluid">
-          <a
-            id="nav-header"
-            href="/"
-            class="navbar-brand d-flex align-items-center justify-content-start"
-          >
+          <a id="nav-header" href="/" class="navbar-brand d-flex align-items-center justify-content-start">
             <img
               src="/assets/teaEmoji.png"
               href="/"
@@ -47,6 +43,8 @@
               height="64"
             />
           </a>
+
+          {{!-- nav expand button on md and smaller screen sizes --}}
           <button
             class="navbar-toggler"
             type="button"
@@ -58,8 +56,10 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          {{!-- buttons displayed on the nav when expanded --}}
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 list-group-horizontal">
 
               {{! LOGIN BUTTON }}
               <li class="nav-item dropdown">
@@ -72,11 +72,8 @@
                 >
                   Login
                 </a>
-                <ul
-                  class="dropdown-menu dropdown-menu-dark"
-                  aria-labelledby="navbarDropdown"
-                >
-                  <form id="login-form" class="px-2 py-3 opacity-100 login-form">
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
+                  <form id="login-form" class="px-2 pt-4 opacity-100 login-form">
                     <div class="mb-3">
                       <label
                         for="exampleDropdownFormEmail1"
@@ -112,7 +109,7 @@
               {{! LOGOUT BUTTON }}
 
               {{#if loggedIn}}
-                <li class="nav-item">
+                <li class="nav-item ms-3">
                   <a
                     class="nav-link"
                     id="logout"
@@ -121,10 +118,11 @@
                   >Logout</a>
                 </li>
               {{/if}}
+            {{!-- </ul> --}}
 
               {{! RIGHT NAV BUTTON }}
               {{! //TODO: MOBILE POSITIONING USING SM BOOTSTRAP CLASS  }}
-            </ul>
+            <li class="nav-item " id="rightNavButton">
             <div class="dropdown">
               <button
                 class="btn btn-secondary navBtn"
@@ -149,7 +147,28 @@
                     href="/collab"
                   >Collabrewators</a></li>
               </ul>
+            </li>
+
+            <div>
+              <li class="nav-item ms-3" id="smallScreenLinks">
+                  <a class="nav-link" href="/tutorportal">Tutor List</a>
+              </li>
+              <li class="nav-item ms-3" id="smallScreenLinks">
+                  <a class="nav-link" href="/sip">View Reviews</a>
+              </li>
+              <li class="nav-item ms-3" id="smallScreenLinks">
+                  <a class="nav-link" href="/spilltea">Spill the Tea</a>
+              </li>
+              <li class="nav-item ms-3" id="smallScreenLinks">
+                  <a class="nav-link" href="/collab">Collabrewators</a>
+              </li> 
             </div>
+
+
+            </div>          
+            </ul> 
+            
+
           </div>
         </div>
       </nav>
@@ -168,17 +187,16 @@
           {{> toast}}
     {{/if}}
     {{! FOOTER }}
-    <div id="footer" class="row position-absolute-bottom bottom-0">
       <footer
-        class="py-3 d-flex justify-content-between align-items-center"
+        id="footer" class="py-3 d-flex justify-content-between align-items-center"
       >
         <div id="footer-co" class="justify-content-start flex-start align-items-center ps-2">
-          <p class="my-1">&copy;  <a href="/coll">Collabrewation</a> </p>
+          <p class="my-1">&copy;  <a class="text-light" href="/collab">Collabrewation</a> </p>
       </div>
 {{!-- Scrolling quotes in footer bar --}}
     <div class="quotes justify-content-center flex-middle">
-    <aside class="title text-center" style="color:white; font-family:BellandLamb; font-size:2.5rem">Famous Musings<br>
-      <div class="quoteBlock" style="color:white; font-family:sans-serif; font-size:1rem">   
+    <aside class="title text-center" style="font-family:BellandLamb; font-size:2.5rem">Famous Musings<br>
+      <div class="quoteBlock" style="font-family:sans-serif; font-size:1rem">   
         I swear to spill the <b>tea</b>, the whole <b>tea</b>, and nothing but the <b>tea</b> <i> ~ Collabrewators ~ </i>
         <h5 id="quote"></h5>
       </div> 
@@ -204,8 +222,8 @@
         </div>
 
       </footer>
-      <div id="scrollTop"> ↑ </div>
-    </div>
+
+    <div id="scrollTop"> ↑ </div>
 
     {{! SCROLL TOP BUTTON }}
 

@@ -36,6 +36,12 @@ a {
   color: var(--textPrimary);
 }
 
+#rightNavButton {
+  position: absolute;
+  right: 1rem;
+  
+}
+
 .dropdown-menu-dark {
   background: #28302fdc;
   color: var(--textPrimary);
@@ -57,6 +63,10 @@ a {
 
 #offcanvasNavbar {
   background-color: var(--textPrimary);
+}
+
+#smallScreenLinks {
+  display: none;
 }
 
 #scrollTop {
@@ -167,7 +177,7 @@ a {
 
 /* LAYOUT */
 .container {
-  display: flex;
+  /* display: flex; */
   flex-flow: column wrap;
   align-items: center;
 }
@@ -228,5 +238,12 @@ tbody tr:hover {
   #footer .quotes {
     width: 75%;
     margin-bottom: 2rem;
+  }
+  #rightNavButton {
+    display: none;
+  }
+  #smallScreenLinks {
+    display: inline-flex;
+    
   }
 }
