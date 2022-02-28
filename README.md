@@ -62,15 +62,11 @@ SCREENSHOTS:
 
 -MAIN PAGE
           <img src="imgs/Screen Shot 2022-02-28 at 1.51.26 PM.png">
-
 -DASHBOARD
            <img src="imgs/dashboard.png">
-
 -SPILLING THE TEA
           <img src="imgs/spill the Tea img.png">
-
 -ACTIVE TUTORS
           <img src="imgs/activeTutors img.png">
-
 -THE COLLABREATORS
-           <img src="imgs/collabrewators img.png">`
+           <img src="imgs/collabrewators img.png">
