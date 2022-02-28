@@ -1,5 +1,5 @@
 # tutortea
-Spill the tea on your tutor or find a new tutor that fits your acquired taste.
+Spill the tea on your tutor or find a new tutor that fits your learning style, & schedule.
 
 
 TUTOR TEA
