@@ -1,5 +1,3 @@
-
-
 const submitTutor = async (event) => {
   event.preventDefault();
   const body = {
@@ -14,18 +12,15 @@ const submitTutor = async (event) => {
     },
     body: JSON.stringify(body),
   });
-  if (response.ok) document.location.reload();
-
-  else alert("failed to post new tutor");
-  
+  if (response.ok) {
+    document.location.replace(
+      "/tutorportal/?toast=" + encodeURI(`Thanks for adding a tutor!`)
+    );
+  } else
+    document.location.replace(
+      "/tutorportal/?toast=" +
+        encodeURI("You may have missed a field. Try again!")
+    );
 };
-
-
-
-
-
-
-
-
 
 document.querySelector("#tutor-button").addEventListener("click", submitTutor);

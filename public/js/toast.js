@@ -1,5 +1,4 @@
 const message = document.querySelector("#toast-body").innerHTML;
-console.log(message);
 
 Toastify({
   text: message,

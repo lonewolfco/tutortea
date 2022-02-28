@@ -3,6 +3,8 @@
   --secondary: #747867;
   --background: #d1d1d1;
   --textPrimary: #ffffff;
+  --tertiary: #5e877f;
+  --quat: #2c3f2f;
 }
 
 @font-face {
@@ -132,6 +134,13 @@ a {
   opacity: 0.8;
   color: var(--textPrimary);
 }
+
+.review-list {
+  background-color: var(--quat) !important;
+  opacity: 0.8;
+  color: var(--textPrimary);
+}
+
 .login-form {
   flex-direction: column;
   justify-content: left;
@@ -169,9 +178,19 @@ a {
   justify-content: center;
 }
 
-table tr:hover {
+tbody tr:hover {
   background-color: white !important;
   border: var(--primary);
+  color: var(--primary) !important;
+}
+
+.tutor-emails a {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
 }
 
 @media only screen and (max-width: 1024px) {
