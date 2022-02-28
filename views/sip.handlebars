@@ -1,37 +1,75 @@
 <section class="container review-list my-5">
-  <table class="table">
+
+  <table class="table table-hover">
     <thead>
-      <tr style="color:white;">
-        <td scope="col">Tutor Name</td>
+      <tr style="color:white; font-weight:bolder; font-size:1.25rem">
+        <td scope="col">My Tutors</td>
         <td scope="col">Rating</td>
-        <td scope="col">Review</td>
+        <td scope="col">My Reviews (Click to edit)</td>
         <td scope="col">Availability</td>
       </tr>
     </thead>
 
-    {{#each reviews as |review|}}
-      <tr style="color:white;">
-        <td>
-          {{review.tutor.name}}
-        </td>
-        <td>
-          {{review.rating}}
-        </td>
-        <td>
-          {{review.review}}
-        </td>
-        <td>
-          {{#if review.daytime}}
-            Daytime
-          {{/if}}
-          {{#if review.weekends}}
-            Weekends
-          {{/if}}
-          {{#if review.nights}}
-            Nights
-          {{/if}}
-        </td>
+       {{#each myReviews as |myReview|}}
+        <tr href="/review/:{{myReview.id}}" value="{{user_id}}" style="color:white">
+          <td>
+            {{myReview.tutor.name}}
+          </td>
+          <td>
+            {{myReview.rating}}
+          </td>
+          <td>
+            {{myReview.review}}
+          </td>
+          <td>
+            {{#if myReview.daytime}}
+              Daytime
+            {{/if}}
+            {{#if myReview.weekends}}
+              Weekends
+            {{/if}}
+            {{#if myReview.nights}}
+              Nights
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
+
+    <thead>
+      <tr style="color:white; font-weight:bolder; font-size:1.25rem">
+        <td scope="col">All Tutors</td>
+        <td scope="col">Rating</td>
+        <td scope="col">Reviews (sorted by newest)</td>
+        <td scope="col">Availability</td>
       </tr>
-    {{/each}}
+    </thead>
+
+ 
+    {{#each reviews as |review|}}
+        <tr style="color:white;">
+          <td>
+            {{review.tutor.name}}
+          </td>
+          <td>
+            {{review.rating}}
+          </td>
+          <td>
+            {{review.review}}
+          </td>
+          <td>
+            {{#if review.daytime}}
+              Daytime
+            {{/if}}
+            {{#if review.weekends}}
+              Weekends
+            {{/if}}
+            {{#if review.nights}}
+              Nights
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
   </table>
 </section>
+
+<script src="/js/updateReviews.js"></script>

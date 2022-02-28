@@ -44,7 +44,7 @@ a {
   color: var(--textPrimary);
   z-index: 0;
 
-  position:relative;
+  position: relative;
   position: bottom;
   width: 100vw;
 }
@@ -133,8 +133,8 @@ a {
   color: var(--textPrimary);
 }
 .login-form {
-  flex-direction:column;
-  justify-content:left;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .login-form,
@@ -167,6 +167,11 @@ a {
 .signup-form1 {
   display: flex;
   justify-content: center;
+}
+
+table tr:hover {
+  background-color: white !important;
+  border: var(--primary);
 }
 
 @media only screen and (max-width: 1024px) {

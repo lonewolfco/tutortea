@@ -1,11 +1,6 @@
 const router = require("express").Router();
-const {
-  withAuth
-} = require("../utils/auth");
-const {
-  Tutor,
-  Review
-} = require("../models");
+const { withAuth } = require("../utils/auth");
+const { Tutor, Review, User } = require("../models");
 
 // Use the custom middleware before allowing the user to access tutors and reviews
 router.get("/", async (req, res) => {
@@ -34,7 +29,6 @@ router.get("/login", (req, res) => {
 // create review
 router.get("/spilltea", withAuth, async (req, res) => {
   const tutorsData = await Tutor.findAll(); // Server-side render
-
   const tutors = tutorsData.map((tutor) => tutor.toJSON());
 
   res.render("spilltea", {
@@ -45,21 +39,24 @@ router.get("/spilltea", withAuth, async (req, res) => {
   });
 });
 
-// create review
+// view reviews and tutor name and user_id
 router.get("/sip", withAuth, async (req, res) => {
   const reviewsData = await Review.findAll({
-    include: [{
-      model: Tutor
-    }],
-    order: [
-      ['createdAt', 'DESC']
-    ],
+    include: [{ model: Tutor }],
+    order: [["createdAt", "DESC"]],
   }); // Server-side render
-
+  //only find my reviews
+  const myReviewsData = await Review.findAll({
+    where: {user_id: req.session.user_id},
+    include: [{ model: Tutor }],
+    order: [["createdAt", "DESC"]],
+  });
+  
   const reviews = reviewsData.map((review) => review.toJSON());
-
+  const myReviews = myReviewsData.map((myReview) => myReview.toJSON());
   res.render("sip", {
     reviews,
+    myReviews,
     loggedIn: req.session.loggedIn,
     user_id: req.session.user_id,
     username: req.session.username,
