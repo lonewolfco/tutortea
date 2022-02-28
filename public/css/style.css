@@ -184,6 +184,18 @@ tbody tr:hover {
   color: var(--primary) !important;
 }
 
+.review-list{
+  justify-content:left;
+ 
+}
+
+.review-list table th {
+  cursor: pointer;
+  color:white; 
+  font-weight:bold;
+  font-size:1.25rem;
+}
+
 .tutor-emails a {
   color: inherit !important;
   text-decoration: none !important;
