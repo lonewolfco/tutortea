@@ -39,7 +39,6 @@ a {
 #rightNavButton {
   position: absolute;
   right: 1rem;
-  
 }
 
 .dropdown-menu-dark {
@@ -162,6 +161,8 @@ a {
   justify-content: center !important;
 }
 
+
+
 .submitBtn {
   text-decoration: none;
 }
@@ -182,11 +183,11 @@ a {
   align-items: center;
 }
 
-.signup-form,
 .signup-form1 {
   display: flex;
   justify-content: center;
 }
+
 
 tbody tr:hover {
   background-color: white !important;
@@ -194,16 +195,15 @@ tbody tr:hover {
   color: var(--primary) !important;
 }
 
-.review-list{
-  justify-content:left;
- 
+.review-list {
+  justify-content: left;
 }
 
 .review-list table th {
   cursor: pointer;
-  color:white; 
-  font-weight:bold;
-  font-size:1.25rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .tutor-emails a {
@@ -218,6 +218,7 @@ tbody tr:hover {
 @media only screen and (max-width: 1024px) {
   #footer {
     position: relative !important;
+    flex-direction: column !important;
   }
   #footer .quotes {
     width: 50%;
@@ -245,6 +246,5 @@ tbody tr:hover {
   }
   #smallScreenLinks {
     display: inline-flex;
-    
   }
 }
